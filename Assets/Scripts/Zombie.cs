@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimientoObj : MonoBehaviour
+public class Zombie : MonoBehaviour
 {
     public int vida, daño;
     GameObject objetoposi;
@@ -26,6 +26,11 @@ public class MovimientoObj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (vida <= 0)
+        {
+        Destroy(objetoposi);
+        Destroy(this.gameObject);
+        }
         if (activador) Movimiento();
     }
 
@@ -42,12 +47,12 @@ public class MovimientoObj : MonoBehaviour
         Destroy(this.gameObject);
         activador = true;
     }
-    
+
     IEnumerator SubirInicioVida()
     {
         activador = false;
         Debug.Log("Subiendo vida");
-        for (int x=0; x<100; x++)
+        for (int x = 0; x < 100; x++)
         {
             vida += 1;
             yield return new WaitForSeconds(0.03f);
@@ -56,7 +61,7 @@ public class MovimientoObj : MonoBehaviour
         Debug.Log("Listo para comer cerebros");
         activador = true;
     }
-    
+
     public void Movimiento()
     {
         direccion = objetoposi.transform.position - transform.position;
@@ -70,7 +75,7 @@ public class MovimientoObj : MonoBehaviour
         }
     }
 
-    
+
     public void DañarEnemigo()
     {
         //Aqui dañaria al zombie
@@ -78,8 +83,22 @@ public class MovimientoObj : MonoBehaviour
 
     public void Curar()
     {
-        //No estoy muy seguro como se impementaría pero sería interezante hehe
+        //No estoy muy seguro como se impementaría pero sería interesante hehe
     }
-    
+
+    /*
+     * Linea 1 posiobSjet Vector3(-5f,1.153f,-4.324f)
+     * Linea 2 posiobjet Vector3(-5f,1.153f,-5.838f)
+     * Linea 3 posiobjet Vector3(-5f,1.153f,-7.256f)
+     * Linea 4 pósiobjet Vector3(-5f,1.153f,-8.665f)
+     * Linea 5 posiobjet Vector3(-5f,1.153f,-9.94f)
+     * ESTAS SON LAS POSISIONES FINALES DEL OBJETIVO DE CADA LINEA
+     * Linea 1 posiobjet Vector3(5f,1.153f,-4.324f)
+     * Linea 2 posiobjet Vector3(5f,1.153f,-5.838f)
+     * Linea 3 posiobjet Vector3(5f,1.153f,-7.256f)
+     * Linea 4 pósiobjet Vector3(5f,1.153f,-8.665f)
+     * Linea 5 posiobjet Vector3(5f,1.153f,-9.94f)
+     * SPAWN POSISIONES CADA FILA ZOMBIES
+     */
 
 }
