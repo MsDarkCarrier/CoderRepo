@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    public int vida, daño;
+    public float vida, daño;
     GameObject objetoposi;
     public float velocidad;
     private Vector3 direccion;
