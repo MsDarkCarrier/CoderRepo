@@ -57,6 +57,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "da\xF1o": 25
   velocidad: 2
+  inicio: {x: 0, y: 0, z: 0}
   activador: 1
   otro: 0
 --- !u!23 &7329839083640011433

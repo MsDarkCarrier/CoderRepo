@@ -364,8 +364,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a706e148cbc7240a4d26481138188e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tipGuisante: a
   balaPlanta: {fileID: 7329839083640011428, guid: a896ec2fd90432c4abcc8951926734a1, type: 3}
   mira: {fileID: 6982537876034532753}
+  zombie: 0
+  vida: 0
 --- !u!1 &6982537876385889140
 GameObject:
   m_ObjectHideFlags: 0

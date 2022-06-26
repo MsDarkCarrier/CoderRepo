@@ -19,8 +19,6 @@ public class Zombie : MonoBehaviour
             objetoposi.transform.position = posiobjet;
             objetoposi.transform.rotation = transform.rotation;
         }
-
-        StartCoroutine(SubirInicioVida());
     }
 
     // Update is called once per frame
@@ -48,7 +46,7 @@ public class Zombie : MonoBehaviour
         activador = true;
     }
 
-    IEnumerator SubirInicioVida()
+   /* IEnumerator SubirInicioVida()
     {
         activador = false;
         Debug.Log("Subiendo vida");
@@ -61,6 +59,7 @@ public class Zombie : MonoBehaviour
         Debug.Log("Listo para comer cerebros");
         activador = true;
     }
+   */
 
     public void Movimiento()
     {
