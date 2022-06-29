@@ -18,6 +18,7 @@ public class Planta : MonoBehaviour
         TipoPlanta();
         for (int x = 0; x < balas.Length; x++)
         {
+            if (tipGuisante=="e") balas[x].GetComponent<Guisantes>().hielo = true;
             balas[x] = Disparador();
             balas[x].name = "Guisante" + x;
             balas[x].GetComponent<Guisantes>().inicio = mira.transform.position;
@@ -145,6 +146,7 @@ public class Planta : MonoBehaviour
             }
 
 
+
         }
     }
     GameObject Disparador()
@@ -172,10 +174,13 @@ public class Planta : MonoBehaviour
                 GameObject[] trip = new GameObject[7];
                 balas = trip;
                 break;
-
-            default:
+            case ("d"):
                 GameObject[] tralla = new GameObject[9];
                 balas = tralla;
+                break;
+            default:
+                GameObject[] hielo = new GameObject[3];
+                balas = hielo;
                 break;
         }
     }
