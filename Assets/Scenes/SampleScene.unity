@@ -1282,7 +1282,7 @@ PrefabInstance:
       objectReference: {fileID: 7329839083640011428, guid: a896ec2fd90432c4abcc8951926734a1, type: 3}
     - target: {fileID: 759940878130509763, guid: 917e6349d772bfe41bea391e795bf74b, type: 3}
       propertyPath: vida
-      value: 100
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 759940878130509763, guid: 917e6349d772bfe41bea391e795bf74b, type: 3}
       propertyPath: zombie
