@@ -98,6 +98,7 @@ public class Zombie : MonoBehaviour
      * Linea 4 pósiobjet Vector3(5f,1.153f,-8.665f)
      * Linea 5 posiobjet Vector3(5f,1.153f,-9.94f)
      * SPAWN POSISIONES CADA FILA ZOMBIES
-     */
+     * Esto debería estar aquí al modificarlo
+     */ 
 
 }
