@@ -13,7 +13,7 @@ public class Guisantes : MonoBehaviour
     {
     }
 
-    // Update is called once per frame
+    // Update is called once per frame CAMBIANDO COSITAS
     void Update()
     {
         var movimiento = Vector3.right * velocidad * Time.deltaTime;
