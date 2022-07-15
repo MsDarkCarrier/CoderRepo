@@ -6,7 +6,7 @@ public class Guisantes : MonoBehaviour
 {
     public float daño,velocidad,tiempoMin,tiempoMax;
     public Vector3 inicio;
-    public bool activador = true, otro = false;
+    public bool activador = true, otro = false,hielo=false;
     
     // Start is called before the first frame update
     void Start()
