@@ -1290,11 +1290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 759940878130509763, guid: 917e6349d772bfe41bea391e795bf74b, type: 3}
       propertyPath: tipGuisante
-<<<<<<< HEAD
       value: c
-=======
-      value: b
->>>>>>> VersionHieloGuisanteAlpha3.3.2
       objectReference: {fileID: 0}
     - target: {fileID: 6982537876226702216, guid: 917e6349d772bfe41bea391e795bf74b, type: 3}
       propertyPath: m_Name
