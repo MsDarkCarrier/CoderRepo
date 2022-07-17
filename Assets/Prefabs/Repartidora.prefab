@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 3748951778656261093}
   - component: {fileID: 3748951778656261092}
   m_Layer: 0
-  m_Name: LanzaGuisanteConCejas
+  m_Name: Repartidora
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
