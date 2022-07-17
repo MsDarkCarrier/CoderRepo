@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6982537876018789649}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.636606, y: 10.252913, z: -13.677622}
+  m_LocalPosition: {x: 7.636606, y: 10.252913, z: -13.67}
   m_LocalScale: {x: 0.08607019, y: 0.27604264, z: 0.10027585}
   m_Children: []
   m_Father: {fileID: 6982537876226702218}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 6982537876123901817}
   - component: {fileID: 6982537876123901822}
   m_Layer: 0
-  m_Name: Cara (1)
+  m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6982537876123901820}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.8979063, y: 10.4516, z: -13.6874}
+  m_LocalPosition: {x: 7.897906, y: 10.41, z: -13.674379}
   m_LocalScale: {x: 0.13380419, y: 0.065558866, z: 0.088171825}
   m_Children: []
   m_Father: {fileID: 6982537876226702218}
@@ -247,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6982537876179252746}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.657306, y: 10.4657135, z: -13.687022}
+  m_LocalPosition: {x: 7.657306, y: 10.4657135, z: -13.674}
   m_LocalScale: {x: 0.35991678, y: 0.22717237, z: 0.2726988}
   m_Children: []
   m_Father: {fileID: 6982537876226702218}
@@ -325,6 +325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6982537876226702218}
   - component: {fileID: 759940878130509763}
+  - component: {fileID: 661706153}
   m_Layer: 0
   m_Name: LanzaGuizante
   m_TagString: Untagged
@@ -367,8 +368,27 @@ MonoBehaviour:
   tipGuisante: a
   balaPlanta: {fileID: 7329839083640011428, guid: a896ec2fd90432c4abcc8951926734a1, type: 3}
   mira: {fileID: 6982537876034532753}
-  zombie: 0
-  vida: 0
+  zombie: 1
+  vida: 100
+--- !u!95 &661706153
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6982537876226702216}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d484eb06b30913c40856c530422cdbe4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6982537876385889140
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6982537876385889140}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.636606, y: 10.079514, z: -13.668522}
+  m_LocalPosition: {x: 7.636606, y: 10.0795, z: -13.668522}
   m_LocalScale: {x: 0.08607019, y: 0.07533203, z: 0.3098707}
   m_Children: []
   m_Father: {fileID: 6982537876226702218}
@@ -490,13 +510,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6982537876797736373}
-  m_LocalRotation: {x: -0, y: -0.68076265, z: -0, w: 0.73250407}
-  m_LocalPosition: {x: 7.636606, y: 10.079514, z: -13.668522}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 7.636606, y: 10.0795, z: -13.668522}
   m_LocalScale: {x: 0.08607019, y: 0.07533203, z: 0.3098707}
   m_Children: []
   m_Father: {fileID: 6982537876226702218}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: -85.807, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &6982537876797736369
 MeshFilter:
   m_ObjectHideFlags: 0
