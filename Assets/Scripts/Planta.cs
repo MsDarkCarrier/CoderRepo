@@ -15,6 +15,7 @@ public class Planta : MonoBehaviour
 
     void Start()
     {
+        vida = 100f;
         TipoPlanta();
         for (int x = 0; x < balas.Length; x++)
         {
