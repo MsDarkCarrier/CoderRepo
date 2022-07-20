@@ -18,16 +18,15 @@ public class Podadora : MonoBehaviour
         if (activo) MoverMorir();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Zombie"))
+        if (other.gameObject.CompareTag("Zombie"))
         {
             salida.enabled = true;
-            collision.gameObject.GetComponent<Zombie>().vida = 0;
-            collision.gameObject.GetComponent<Zombie>().velocidad = 0;
+            other.gameObject.GetComponent<Zombie>().vida = 0;
+            other.gameObject.GetComponent<Zombie>().velocidad = 0;
             activo = true;
         }
-
     }
 
     public void MoverMorir()

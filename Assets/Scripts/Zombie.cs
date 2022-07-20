@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    public float vida, daño, velocidad, velociCompro, tiempomax = 0.5f, timpmin;
+    public float vida, daño, velocidad, velociCompro, tiempomax = 0.5f, timpmin,tiemporelentizado=6f;
     public AudioSource[] comer = new AudioSource[4];
     GameObject objetoposi, planta;
     public Vector3 posiobjet, direccion;
@@ -21,7 +21,6 @@ public class Zombie : MonoBehaviour
             objetoposi.transform.rotation = transform.rotation;
         }
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -91,7 +90,6 @@ public class Zombie : MonoBehaviour
             variable--;
             comer[variable].enabled = true;
         }
-        Debug.Log(plant.vida);
 
         if (plant.vida <= 12.5f &&comer[3].enabled)
         {
@@ -103,6 +101,17 @@ public class Zombie : MonoBehaviour
             comer[3].enabled = true;
         }
         plant.vida -= daño;
+    }
+
+    public IEnumerator CongeladoTime()
+    {
+        velocidad /= 2;
+        tiempomax /= 2;
+        falserelentizado = false;
+        yield return new WaitForSeconds(tiemporelentizado);
+        velocidad *= 2;
+        tiempomax *= 2;
+        falserelentizado = true;
     }
 
     /*
