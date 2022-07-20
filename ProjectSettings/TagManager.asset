@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Zombie
+  - Planta
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Zombie
   - Water
   - UI
-  - 
+  - Planta
   - 
   - 
   - 

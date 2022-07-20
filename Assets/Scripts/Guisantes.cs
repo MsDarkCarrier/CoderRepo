@@ -4,52 +4,242 @@ using UnityEngine;
 
 public class Guisantes : MonoBehaviour
 {
-    public float daño,velocidad,tiempoMin,tiempoMax;
-    public Vector3 inicio;
-    public bool activador = true, otro = false,hielo=false;
-    
-    // Start is called before the first frame update
+    private int tp = 0,contador;
+    private float tiempoMin = 0, tiempoMax = 3f;
+    public string tipGuisante;
+    public GameObject balaPlanta, mira;
+    private GameObject[] balas;
+    private bool zombie, primeraVez = true;
+    public AudioSource salidaDos, salida;
+
+    private void Awake()
+    {
+        contador = 0;
+    }
     void Start()
     {
+        TipoPlanta();
+        for (int x = 0; x < balas.Length; x++)
+        {
+            if (tipGuisante == "e") balas[x].GetComponent<Guisante>().hielo = true;
+            balas[x] = Disparador();
+            balas[x].name = "Guisante" + x;
+            balas[x].GetComponent<Guisante>().inicio = mira.transform.position;
+            balas[x].SetActive(false);
+        }
+
     }
 
-    // Update is called once per frame CAMBIANDO COSITAS
+    // Update is called once per frame
     void Update()
     {
-        var movimiento = Vector3.right * velocidad * Time.deltaTime;
-        transform.position = new Vector3(transform.position.x + movimiento.x, transform.position.y, transform.position.z);
-        if (!otro) StartCoroutine(TiempoVolver());
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponent<Zombie>())
+        if (GetComponent<Planta>().vida <= 0)
         {
-            other.gameObject.GetComponent<Zombie>().vida -= daño;
-            VolverBala();
-            otro = false;
+            for (int x = 0; x < balas.Length; x++)
+            {
+                if (!balas[x].activeInHierarchy) Destroy(balas[x]); else balas[x].GetComponent<Guisante>().inicio = new Vector3(0, 0, 0);
+            }
+            Destroy(this.gameObject);
+        }
+        DetectorZombie();
+        if (zombie)
+        {
+            if (primeraVez)
+            {
+                primeraVez = false;
+                StartCoroutine(TiempoMicro());
+            }
+            tiempoMin += Time.deltaTime;
+            if (tiempoMin >= tiempoMax)
+            {
+                StartCoroutine(TiempoMicro());
+                tiempoMin = 0;
+            }
         }
     }
 
-    public void VolverBala()
+    private void SonidoDisparo()
     {
-        if (inicio== new Vector3(0,0,0)) Destroy(this.gameObject);
-        this.gameObject.SetActive(false);
-        transform.position = inicio;
-        activador = false;
+        if (contador <= 0)
+        {
+            contador++;
+            salida.enabled = true;
+            if (salidaDos.enabled) salidaDos.enabled = false;
+        }
+        else
+        {
+            contador--;
+            if (salida.enabled) salida.enabled = false;
+            salidaDos.enabled = true;
+        }
+    }
+    IEnumerator TiempoMicro()
+    {
+        for (int x = 0; x < balas.Length; x++)
+        {
+            if (tipGuisante == "a")
+            {
+                if (!balas[x].activeInHierarchy)
+                {
+                    SonidoDisparo();
+                    balas[x].SetActive(true);
+                    break;
+                }
+            }
+            if (tipGuisante == "b")
+            {
+                if (!balas[x].activeInHierarchy)
+                {
+                    if (tp == 0)
+                    {
+                        SonidoDisparo();
+                        balas[x].SetActive(true);
+                        tp++;
+                        continue;
+                    }
+                    if (tp == 1)
+                    {
+                        yield return new WaitForSeconds(Random.Range(0.1f, 0.7f));
+                        SonidoDisparo();
+                        balas[x].SetActive(true);
+                        tp = 0;
+                        break;
+                    }
+                }
+            }
+
+            if (tipGuisante == "c")
+            {
+                if (!balas[x].activeInHierarchy)
+                {
+                    if (tp == 0)
+                    {
+                        SonidoDisparo();
+                        balas[x].SetActive(true);
+                        tp++;
+                        continue;
+                    }
+                    if (tp == 1)
+                    {
+                        yield return new WaitForSeconds(Random.Range(0.1f, 0.2f));
+                        SonidoDisparo();
+                        balas[x].SetActive(true);
+                        tp++;
+                        continue;
+                    }
+
+                    if (tp == 2)
+                    {
+                        yield return new WaitForSeconds(Random.Range(0.1f, 0.5f));
+                        SonidoDisparo();
+                        balas[x].SetActive(true);
+                        tp = 0;
+                        break;
+                    }
+                }
+            }
+
+            if (tipGuisante == "d")
+            {
+                if (!balas[x].activeInHierarchy)
+                {
+                    if (tp == 0)
+                    {
+                        SonidoDisparo();
+                        balas[x].SetActive(true);
+                        balas[x].GetComponent<Guisante>().hielo = true;
+                        tp++;
+                        continue;
+                    }
+                    if (tp == 1)
+                    {
+                        yield return new WaitForSeconds(0.1f);
+                        SonidoDisparo();
+                        balas[x].SetActive(true);
+                        balas[x].GetComponent<Guisante>().hielo = true;
+                        tp++;
+                        continue;
+                    }
+
+                    if (tp == 2)
+                    {
+                        yield return new WaitForSeconds(Random.Range(0.1f, 0.2f));
+                        SonidoDisparo();
+                        balas[x].SetActive(true);
+                        balas[x].GetComponent<Guisante>().hielo = true;
+                        tp++;
+                        continue;
+                    }
+
+                    if (tp == 3)
+                    {
+                        yield return new WaitForSeconds(Random.Range(0.1f, 0.5f));
+                        SonidoDisparo();
+                        balas[x].SetActive(true);
+                        balas[x].GetComponent<Guisante>().hielo = true;
+                        tp = 0;
+                        break;
+                    }
+                }
+            }
+
+
+
+        }
+    }
+    GameObject Disparador()
+    {
+        GameObject guisante;
+        guisante = Instantiate(balaPlanta);
+        guisante.transform.position = mira.transform.position;
+        return guisante;
+    }
+    void TipoPlanta()
+    {
+        switch (tipGuisante)
+        {
+            case ("a"):
+                GameObject[] guisan = new GameObject[3];
+                balas = guisan;
+                break;
+
+            case ("b"):
+                GameObject[] rep = new GameObject[5];
+                balas = rep;
+                break;
+
+            case ("c"):
+                GameObject[] trip = new GameObject[7];
+                balas = trip;
+                break;
+            case ("d"):
+                GameObject[] tralla = new GameObject[9];
+                balas = tralla;
+                break;
+            default:
+                GameObject[] hielo = new GameObject[3];
+                balas = hielo;
+                break;
+        }
     }
 
-    public IEnumerator TiempoVolver()
+    void DetectorZombie()
     {
-        otro = true;
-        yield return new WaitForSeconds(5f);
-        VolverBala();
-        otro = false;
+        RaycastHit recibe;
+        if (Physics.Raycast(mira.transform.position, Vector3.right, out recibe, 7.2f, LayerMask.GetMask("Zombie")))
+        {
+            zombie = true;
+        }
+        else
+        {
+            primeraVez = true;
+            zombie = false;
+        }
     }
 
-
-
-
-
-
+    /*Guisante normal=a
+     * Repartidora=b
+     * Tripitidora=c
+     * Guisantalladora=d
+     */
 }

@@ -5,10 +5,11 @@ using UnityEngine;
 public class Podadora : MonoBehaviour
 {
     private bool activo = false, otro = false;
+    private AudioSource salida;
     // Start is called before the first frame update
     void Start()
     {
-
+        salida = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -17,15 +18,15 @@ public class Podadora : MonoBehaviour
         if (activo) MoverMorir();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Zombie"))
+        if (other.gameObject.CompareTag("Zombie"))
         {
-            collision.gameObject.GetComponent<Zombie>().vida = 0;
-            collision.gameObject.GetComponent<Zombie>().velocidad = 0;
+            salida.enabled = true;
+            other.gameObject.GetComponent<Zombie>().vida = 0;
+            other.gameObject.GetComponent<Zombie>().velocidad = 0;
             activo = true;
         }
-
     }
 
     public void MoverMorir()

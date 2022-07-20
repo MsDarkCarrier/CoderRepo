@@ -1199,7 +1199,7 @@ GameObject:
   - component: {fileID: 8362719344994367121}
   m_Layer: 0
   m_Name: Girasol
-  m_TagString: Untagged
+  m_TagString: Planta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

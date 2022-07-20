@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    public float vida, daño;
-    GameObject objetoposi;
-    public float velocidad;
-    private Vector3 direccion;
-    public Vector3 posiobjet;
-    private bool activador = true;
+    public float vida, daño, velocidad, velociCompro, tiempomax = 0.5f, timpmin,tiemporelentizado=6f;
+    public AudioSource[] comer = new AudioSource[4];
+    GameObject objetoposi, planta;
+    public Vector3 posiobjet, direccion;
+    private bool activador = true, comiendo = false, falserelentizado = false;
     // Start is called before the first frame update
     void Start()
     {
+        timpmin = 0;
+        velociCompro = velocidad;
         if (objetoposi == null)
         {
             objetoposi = new GameObject("PosPersonaje");
@@ -20,46 +21,32 @@ public class Zombie : MonoBehaviour
             objetoposi.transform.rotation = transform.rotation;
         }
     }
-
     // Update is called once per frame
     void Update()
     {
         if (vida <= 0)
         {
-        Destroy(objetoposi);
-        Destroy(this.gameObject);
+            Destroy(objetoposi);
+            Destroy(this.gameObject);
         }
-        if (activador) Movimiento();
-    }
-
-    IEnumerator Llamadayfinal()
-    {
-        activador = false;
-        Debug.Log("Tan tan tan");
-        yield return new WaitForSeconds(2f);
-        Debug.Log("¡¡NOOOOOOOOOOO!!");
-        yield return new WaitForSeconds(2f);
-        Debug.Log("Te han comido los sesos");
-        yield return new WaitForSeconds(2f);
-        Destroy(objetoposi);
-        Destroy(this.gameObject);
-        activador = true;
-    }
-
-   /* IEnumerator SubirInicioVida()
-    {
-        activador = false;
-        Debug.Log("Subiendo vida");
-        for (int x = 0; x < 100; x++)
+        Movimiento();
+        if (comiendo && planta != null)
         {
-            vida += 1;
-            yield return new WaitForSeconds(0.03f);
+            timpmin += Time.deltaTime;
+            if (timpmin >= tiempomax)
+            {
+                Atacando(planta.GetComponent<Planta>(), comer);
+                timpmin = 0;
+            }
         }
-        yield return new WaitForSeconds(0.5f);
-        Debug.Log("Listo para comer cerebros");
-        activador = true;
+        else
+        {
+            comiendo = false;
+            velocidad = velociCompro;
+            activador = false;
+        }
+
     }
-   */
 
     public void Movimiento()
     {
@@ -70,19 +57,61 @@ public class Zombie : MonoBehaviour
         {
             velocidad = 0f;
             transform.position = objetoposi.transform.position;
-            if (activador) StartCoroutine(Llamadayfinal());
         }
     }
 
-
-    public void DañarEnemigo()
+    private void OnTriggerEnter(Collider other)
     {
-        //Aqui dañaria al zombie
+        if (other.gameObject.CompareTag("Planta"))
+        {
+            velocidad = 0;
+            planta = other.gameObject;
+            Atacando(planta.GetComponent<Planta>(), comer);
+            comiendo = true;
+
+
+        }
     }
 
-    public void Curar()
+    void Atacando(Planta plant, AudioSource[] comer)
     {
-        //No estoy muy seguro como se impementaría pero sería interesante hehe
+        
+        int variable = Random.Range(0, 3);
+        if (!comer[variable].enabled) comer[variable].enabled = true;
+        else if (variable <= 1)
+        {
+            comer[variable].enabled = false;
+            variable++;
+            comer[variable].enabled = true;
+        }
+        else
+        {
+            comer[variable].enabled = false;
+            variable--;
+            comer[variable].enabled = true;
+        }
+
+        if (plant.vida <= 12.5f &&comer[3].enabled)
+        {
+            comer[3].enabled = true;
+        }
+        else if(plant.vida <= 12.5f)
+        {
+            comer[3].enabled = false;
+            comer[3].enabled = true;
+        }
+        plant.vida -= daño;
+    }
+
+    public IEnumerator CongeladoTime()
+    {
+        velocidad /= 2;
+        tiempomax /= 2;
+        falserelentizado = false;
+        yield return new WaitForSeconds(tiemporelentizado);
+        velocidad *= 2;
+        tiempomax *= 2;
+        falserelentizado = true;
     }
 
     /*
