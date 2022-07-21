@@ -19,6 +19,7 @@ public class Podadora : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        /*
         if (other.gameObject.CompareTag("Zombie"))
         {
             salida.enabled = true;
@@ -26,6 +27,7 @@ public class Podadora : MonoBehaviour
             other.gameObject.GetComponent<Zombie>().velocidad = 0;
             activo = true;
         }
+        */
     }
 
     public void MoverMorir()
