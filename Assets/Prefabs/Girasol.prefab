@@ -1062,6 +1062,7 @@ GameObject:
   - component: {fileID: 308192132}
   - component: {fileID: 308192133}
   - component: {fileID: 8115043960473030961}
+  - component: {fileID: 480442262778396914}
   m_Layer: 0
   m_Name: Girasol
   m_TagString: Planta
@@ -1120,7 +1121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a706e148cbc7240a4d26481138188e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 100
+  vida: 300
   coste: 50
   _recarga: 0
 --- !u!114 &308192133
@@ -1152,6 +1153,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16268685, y: 0.038266875, z: 0.34810668}
   m_Center: {x: 0.13276774, y: 0.060026046, z: -0.03842774}
+--- !u!54 &480442262778396914
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362719344994367123}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8362719345048372524
 GameObject:
   m_ObjectHideFlags: 0

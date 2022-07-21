@@ -30,14 +30,14 @@ public class Guisante : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        /*
+        
         if (other.gameObject.GetComponent<Zombie>())
         {
             other.gameObject.GetComponent<Zombie>().vida -= daño;
             VolverBala();
             otro = false;
         }
-        */
+        
     }
 
     public void VolverBala()
