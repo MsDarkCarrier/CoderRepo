@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "da\xF1o": 25
-  velocidad: 2
+  velocidad: 7
   tiempoMin: 0
   tiempoMax: 0
   inicio: {x: 0, y: 0, z: 0}

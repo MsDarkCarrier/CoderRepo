@@ -1229,6 +1229,7 @@ GameObject:
   - component: {fileID: 8362719344994367121}
   - component: {fileID: 308192132}
   - component: {fileID: 308192133}
+  - component: {fileID: 3411477428915891429}
   m_Layer: 0
   m_Name: Girasol
   m_TagString: Planta
@@ -1287,7 +1288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a706e148cbc7240a4d26481138188e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 300
+  vida: 100
   coste: 50
   _recarga: 0
 --- !u!114 &308192133
@@ -1304,7 +1305,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SolPrefab: {fileID: 5858860295880264837, guid: e2d7e239187ce5541ae69f201d978454, type: 3}
   SolSpawn: {fileID: 3876292909497426581}
+  temporal: {fileID: 0}
   tiempoActual: 0
+--- !u!114 &3411477428915891429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362719344994367123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &8362719345048372524
 GameObject:
   m_ObjectHideFlags: 0

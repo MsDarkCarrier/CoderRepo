@@ -5,7 +5,7 @@ using UnityEngine;
 public class Guisantes : MonoBehaviour
 {
     private int tp = 0,contador;
-    private float tiempoMin = 0, tiempoMax = 3f;
+    private float tiempoMin = 0, tiempoMax;
     public string tipGuisante;
     public GameObject balaPlanta, mira;
     private GameObject[] balas;
@@ -44,6 +44,7 @@ public class Guisantes : MonoBehaviour
         DetectorZombie();
         if (zombie)
         {
+            tiempoMax = Random.Range(1,1.9f);
             if (primeraVez)
             {
                 primeraVez = false;
@@ -99,7 +100,7 @@ public class Guisantes : MonoBehaviour
                     }
                     if (tp == 1)
                     {
-                        yield return new WaitForSeconds(Random.Range(0.1f, 0.7f));
+                        yield return new WaitForSeconds(Random.Range(0.2f, 0.5f));
                         SonidoDisparo();
                         balas[x].SetActive(true);
                         tp = 0;
@@ -121,7 +122,7 @@ public class Guisantes : MonoBehaviour
                     }
                     if (tp == 1)
                     {
-                        yield return new WaitForSeconds(Random.Range(0.1f, 0.2f));
+                        yield return new WaitForSeconds(Random.Range(0.2f, 0.5f));
                         SonidoDisparo();
                         balas[x].SetActive(true);
                         tp++;
