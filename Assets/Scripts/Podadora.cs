@@ -6,13 +6,12 @@ public class Podadora : MonoBehaviour
 {
     private bool activo = false, otro = false;
     private AudioSource salida;
-    // Start is called before the first frame update
+
     void Start()
     {
         salida = gameObject.GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (activo) MoverMorir();
@@ -20,6 +19,7 @@ public class Podadora : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        /*
         if (other.gameObject.CompareTag("Zombie"))
         {
             salida.enabled = true;
@@ -27,6 +27,9 @@ public class Podadora : MonoBehaviour
             other.gameObject.GetComponent<Zombie>().velocidad = 0;
             activo = true;
         }
+        */
+
+
     }
 
     public void MoverMorir()
