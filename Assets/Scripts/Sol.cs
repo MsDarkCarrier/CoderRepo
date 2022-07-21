@@ -12,7 +12,7 @@ public class Sol : MonoBehaviour
 
     private void OnMouseDown()
     {
-        GameManager.instancia.SolMoneda += 25;
+        GameManager.instancia.solMoneda += 25;
         Destroy(gameObject);
 
     }

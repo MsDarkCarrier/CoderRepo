@@ -10,9 +10,9 @@ public class Planta : MonoBehaviour
     public float coste;
     public enum VelocidadRecarga
     {
-        Rapida,
-        Lenta,
-        MuyLenta
+        Rapida=8,
+        Lenta=30,
+        MuyLenta=50
     }
     public VelocidadRecarga _recarga = VelocidadRecarga.Rapida;
 
@@ -21,13 +21,13 @@ public class Planta : MonoBehaviour
         switch (_recarga)
         {
             case VelocidadRecarga.Rapida:
-                ;
+                
                 break;
             case VelocidadRecarga.Lenta:
-                ;
+                
                 break;
             case VelocidadRecarga.MuyLenta:
-                ;
+                
                 break;
         }
     }

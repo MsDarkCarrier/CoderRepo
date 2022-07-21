@@ -7,22 +7,19 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instancia;
-    public int SolMoneda;
-    public TextMeshPro texto;
+    public int solMoneda;
+    public TextMeshProUGUI texto;
 
-    private void Awake()
-    {
-        texto = GameObject.FindWithTag("GameController").GetComponent<TextMeshPro>();
-    }
     void Start()
     {
         instancia = this;
-        SolMoneda = 50;
+        texto = GameObject.FindWithTag("SolesText").GetComponent<TextMeshProUGUI>();
+        solMoneda = 50;
     }
 
     void Update()
     {
-        Debug.Log(texto.text);
+        texto.text = Convert.ToString(solMoneda);
     }
 
     public void ASFSDAF()

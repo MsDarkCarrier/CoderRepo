@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 8362719343898257764}
   - component: {fileID: 8362719343898257763}
   - component: {fileID: 8362719343898257762}
-  - component: {fileID: 8362719343898257765}
   m_Layer: 0
   m_Name: Hoja(1) (10)
   m_TagString: Untagged
@@ -112,19 +111,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719343898257765
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719343898257767}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719343899885593
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +122,6 @@ GameObject:
   - component: {fileID: 8362719343899885590}
   - component: {fileID: 8362719343899885589}
   - component: {fileID: 8362719343899885588}
-  - component: {fileID: 8362719343899885591}
   m_Layer: 0
   m_Name: RaizV
   m_TagString: Untagged
@@ -207,19 +192,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719343899885591
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719343899885593}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719343979149353
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +203,6 @@ GameObject:
   - component: {fileID: 8362719343979149350}
   - component: {fileID: 8362719343979149349}
   - component: {fileID: 8362719343979149348}
-  - component: {fileID: 8362719343979149351}
   m_Layer: 0
   m_Name: Hoja(1) (13)
   m_TagString: Untagged
@@ -302,19 +273,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719343979149351
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719343979149353}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719344005237292
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +284,6 @@ GameObject:
   - component: {fileID: 8362719344005237293}
   - component: {fileID: 8362719344005237288}
   - component: {fileID: 8362719344005237291}
-  - component: {fileID: 8362719344005237290}
   m_Layer: 0
   m_Name: Hoja(1) (16)
   m_TagString: Untagged
@@ -397,19 +354,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719344005237290
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719344005237292}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719344177426717
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +365,6 @@ GameObject:
   - component: {fileID: 8362719344177426714}
   - component: {fileID: 8362719344177426713}
   - component: {fileID: 8362719344177426712}
-  - component: {fileID: 8362719344177426715}
   m_Layer: 0
   m_Name: Hoja(1) (1)
   m_TagString: Untagged
@@ -492,19 +435,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719344177426715
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719344177426717}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719344247936100
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +446,6 @@ GameObject:
   - component: {fileID: 8362719344247936101}
   - component: {fileID: 8362719344247936096}
   - component: {fileID: 8362719344247936099}
-  - component: {fileID: 8362719344247936098}
   m_Layer: 0
   m_Name: Hoja(1) (11)
   m_TagString: Untagged
@@ -587,19 +516,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719344247936098
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719344247936100}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719344301501982
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +527,6 @@ GameObject:
   - component: {fileID: 8362719344301501983}
   - component: {fileID: 8362719344301501978}
   - component: {fileID: 8362719344301501981}
-  - component: {fileID: 8362719344301501980}
   m_Layer: 0
   m_Name: Hoja(1) (8)
   m_TagString: Untagged
@@ -682,19 +597,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719344301501980
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719344301501982}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719344309497351
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,7 +608,6 @@ GameObject:
   - component: {fileID: 8362719344309497348}
   - component: {fileID: 8362719344309497347}
   - component: {fileID: 8362719344309497346}
-  - component: {fileID: 8362719344309497349}
   m_Layer: 0
   m_Name: Hoja(1)
   m_TagString: Untagged
@@ -777,19 +678,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719344309497349
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719344309497351}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719344373317107
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,7 +689,6 @@ GameObject:
   - component: {fileID: 8362719344373317104}
   - component: {fileID: 8362719344373317071}
   - component: {fileID: 8362719344373317070}
-  - component: {fileID: 8362719344373317105}
   m_Layer: 0
   m_Name: Hoja(1) (2)
   m_TagString: Untagged
@@ -872,19 +759,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719344373317105
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719344373317107}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719344531553109
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +770,6 @@ GameObject:
   - component: {fileID: 8362719344531553106}
   - component: {fileID: 8362719344531553105}
   - component: {fileID: 8362719344531553104}
-  - component: {fileID: 8362719344531553107}
   m_Layer: 0
   m_Name: Cara
   m_TagString: Untagged
@@ -967,19 +840,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719344531553107
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719344531553109}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719344763625939
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,7 +851,6 @@ GameObject:
   - component: {fileID: 8362719344763625936}
   - component: {fileID: 8362719344763625775}
   - component: {fileID: 8362719344763625774}
-  - component: {fileID: 8362719344763625937}
   m_Layer: 0
   m_Name: Hoja(1) (5)
   m_TagString: Untagged
@@ -1062,19 +921,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719344763625937
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719344763625939}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719344767321739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +932,6 @@ GameObject:
   - component: {fileID: 8362719344767321736}
   - component: {fileID: 8362719344767321735}
   - component: {fileID: 8362719344767321734}
-  - component: {fileID: 8362719344767321737}
   m_Layer: 0
   m_Name: Hoja(1) (7)
   m_TagString: Untagged
@@ -1157,19 +1002,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719344767321737
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719344767321739}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719344782575544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1061,7 @@ GameObject:
   - component: {fileID: 8362719344994367121}
   - component: {fileID: 308192132}
   - component: {fileID: 308192133}
-  - component: {fileID: 3411477428915891429}
+  - component: {fileID: 8115043960473030961}
   m_Layer: 0
   m_Name: Girasol
   m_TagString: Planta
@@ -1307,35 +1139,19 @@ MonoBehaviour:
   SolSpawn: {fileID: 3876292909497426581}
   temporal: {fileID: 0}
   tiempoActual: 0
---- !u!114 &3411477428915891429
-MonoBehaviour:
+--- !u!65 &8115043960473030961
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8362719344994367123}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  serializedVersion: 2
+  m_Size: {x: 0.16268685, y: 0.038266875, z: 0.34810668}
+  m_Center: {x: 0.13276774, y: 0.060026046, z: -0.03842774}
 --- !u!1 &8362719345048372524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,7 +1163,6 @@ GameObject:
   - component: {fileID: 8362719345048372525}
   - component: {fileID: 8362719345048372520}
   - component: {fileID: 8362719345048372523}
-  - component: {fileID: 8362719345048372522}
   m_Layer: 0
   m_Name: Hoja(1) (3)
   m_TagString: Untagged
@@ -1418,19 +1233,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719345048372522
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719345048372524}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719345133259588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,7 +1244,6 @@ GameObject:
   - component: {fileID: 8362719345133259589}
   - component: {fileID: 8362719345133259584}
   - component: {fileID: 8362719345133259587}
-  - component: {fileID: 8362719345133259586}
   m_Layer: 0
   m_Name: Hoja(1) (6)
   m_TagString: Untagged
@@ -1513,19 +1314,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719345133259586
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719345133259588}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719345381630581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,7 +1325,6 @@ GameObject:
   - component: {fileID: 8362719345381630578}
   - component: {fileID: 8362719345381630577}
   - component: {fileID: 8362719345381630576}
-  - component: {fileID: 8362719345381630579}
   m_Layer: 0
   m_Name: Tallo
   m_TagString: Untagged
@@ -1608,19 +1395,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719345381630579
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719345381630581}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719345530842270
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,7 +1406,6 @@ GameObject:
   - component: {fileID: 8362719345530842271}
   - component: {fileID: 8362719345530842266}
   - component: {fileID: 8362719345530842269}
-  - component: {fileID: 8362719345530842268}
   m_Layer: 0
   m_Name: Hoja(1) (12)
   m_TagString: Untagged
@@ -1703,19 +1476,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719345530842268
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719345530842270}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719345680238231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,7 +1487,6 @@ GameObject:
   - component: {fileID: 8362719345680238228}
   - component: {fileID: 8362719345680238227}
   - component: {fileID: 8362719345680238226}
-  - component: {fileID: 8362719345680238229}
   m_Layer: 0
   m_Name: Hoja(1) (15)
   m_TagString: Untagged
@@ -1798,19 +1557,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719345680238229
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719345680238231}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719345696965376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,7 +1568,6 @@ GameObject:
   - component: {fileID: 8362719345696965377}
   - component: {fileID: 8362719345696965404}
   - component: {fileID: 8362719345696965407}
-  - component: {fileID: 8362719345696965406}
   m_Layer: 0
   m_Name: Hoja(1) (4)
   m_TagString: Untagged
@@ -1893,19 +1638,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719345696965406
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719345696965376}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719345745310435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,7 +1649,6 @@ GameObject:
   - component: {fileID: 8362719345745310432}
   - component: {fileID: 8362719345745310463}
   - component: {fileID: 8362719345745310462}
-  - component: {fileID: 8362719345745310433}
   m_Layer: 0
   m_Name: Hoja(1) (14)
   m_TagString: Untagged
@@ -1988,19 +1719,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719345745310433
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719345745310435}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719345820980640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,7 +1730,6 @@ GameObject:
   - component: {fileID: 8362719345820980641}
   - component: {fileID: 8362719345820980668}
   - component: {fileID: 8362719345820980671}
-  - component: {fileID: 8362719345820980670}
   m_Layer: 0
   m_Name: RaizH
   m_TagString: Untagged
@@ -2083,19 +1800,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719345820980670
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719345820980640}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719345853576222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2107,7 +1811,6 @@ GameObject:
   - component: {fileID: 8362719345853576223}
   - component: {fileID: 8362719345853576218}
   - component: {fileID: 8362719345853576221}
-  - component: {fileID: 8362719345853576220}
   m_Layer: 0
   m_Name: Hoja(1) (9)
   m_TagString: Untagged
@@ -2178,16 +1881,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8362719345853576220
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362719345853576222}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
