@@ -28,6 +28,8 @@ public class Podadora : MonoBehaviour
             activo = true;
         }
         */
+
+
     }
 
     public void MoverMorir()
