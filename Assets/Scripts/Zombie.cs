@@ -9,7 +9,7 @@ public class Zombie : MonoBehaviour
     GameObject objetoposi, planta;
     public Vector3 posiobjet, direccion;
     private bool activador = true, comiendo = false, falserelentizado = false;
-    // Start is called before the first frame update
+
     void Start()
     {
         timpmin = 0;
@@ -21,7 +21,7 @@ public class Zombie : MonoBehaviour
             objetoposi.transform.rotation = transform.rotation;
         }
     }
-    // Update is called once per frame
+
     void Update()
     {
         if (vida <= 0)

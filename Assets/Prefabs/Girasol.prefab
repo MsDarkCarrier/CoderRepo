@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3876292909497426581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7953330508998383388}
+  m_Layer: 0
+  m_Name: SolSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7953330508998383388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3876292909497426581}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.114, y: 0.3744601, z: -0.033000045}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_Children: []
+  m_Father: {fileID: 8362719344994367120}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8362719343898257767
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8362719343899885593}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 10.440763, y: 7.5596976, z: 0.9488478}
+  m_LocalPosition: {x: -0.0006366372, y: 0.039800048, z: -0.016152255}
   m_LocalScale: {x: 0.08607, y: 0.07533, z: 0.30987}
   m_Children: []
   m_Father: {fileID: 8362719344994367120}
@@ -882,7 +912,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8362719344531553109}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.4344, y: 7.9458976, z: 0.943}
+  m_LocalPosition: {x: -0.007, y: 0.426, z: -0.022}
   m_LocalScale: {x: 0.06, y: 0.22716999, z: 0.27269998}
   m_Children: []
   m_Father: {fileID: 8362719344994367120}
@@ -1164,7 +1194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8362719344782575544}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2225237, y: 5.5037456, z: 3.6286268}
+  m_LocalPosition: {x: -12.663923, y: -2.016152, z: 2.663627}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8362719344309497348}
@@ -1197,6 +1227,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8362719344994367120}
   - component: {fileID: 8362719344994367121}
+  - component: {fileID: 308192132}
+  - component: {fileID: 308192133}
   m_Layer: 0
   m_Name: Girasol
   m_TagString: Planta
@@ -1212,7 +1244,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8362719344994367123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.017829, y: -6.6721845, z: -11.052}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8362719344531553106}
@@ -1220,6 +1252,7 @@ Transform:
   - {fileID: 8362719345820980641}
   - {fileID: 8362719343899885590}
   - {fileID: 8362719344782575545}
+  - {fileID: 7953330508998383388}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1242,6 +1275,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &308192132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362719344994367123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a706e148cbc7240a4d26481138188e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 300
+  coste: 50
+  _recarga: 0
+--- !u!114 &308192133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362719344994367123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f978b5e6e066af44f8dcc886e7a2b099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SolPrefab: {fileID: 5858860295880264837, guid: e2d7e239187ce5541ae69f201d978454, type: 3}
+  SolSpawn: {fileID: 3876292909497426581}
+  tiempoActual: 0
 --- !u!1 &8362719345048372524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,7 +1522,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8362719345381630581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.43904, y: 7.717, z: 0.946}
+  m_LocalPosition: {x: -0.0023599267, y: 0.19710243, z: -0.019000046}
   m_LocalScale: {x: 0.04132688, y: 0.27604, z: 0.056854736}
   m_Children: []
   m_Father: {fileID: 8362719344994367120}
@@ -1934,7 +1997,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8362719345820980640}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.440763, y: 7.5596976, z: 0.9488478}
+  m_LocalPosition: {x: -0.0006366372, y: 0.039800048, z: -0.016152255}
   m_LocalScale: {x: 0.08607, y: 0.07533, z: 0.30987}
   m_Children: []
   m_Father: {fileID: 8362719344994367120}

@@ -6,13 +6,12 @@ public class Podadora : MonoBehaviour
 {
     private bool activo = false, otro = false;
     private AudioSource salida;
-    // Start is called before the first frame update
+
     void Start()
     {
         salida = gameObject.GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (activo) MoverMorir();

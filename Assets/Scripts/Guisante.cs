@@ -10,7 +10,6 @@ public class Guisante : MonoBehaviour
     public AudioSource[] sonidosSplash=new AudioSource[3];
     private uint contador;
 
-    // Start is called before the first frame update
     private void Awake()
     {
         contador = 0;
