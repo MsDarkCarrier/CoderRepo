@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!136 &4621481
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6268,6 +6268,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 757536966506332993, guid: 92f86fb355a854043909738c95f6c6c9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 757536966506332994, guid: 92f86fb355a854043909738c95f6c6c9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -11363,6 +11367,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3111763534654032305, guid: 5e6517dbb7f50094faf02feb8e931774, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111763534654032308, guid: 5e6517dbb7f50094faf02feb8e931774, type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3111763534654032317, guid: 5e6517dbb7f50094faf02feb8e931774, type: 3}
