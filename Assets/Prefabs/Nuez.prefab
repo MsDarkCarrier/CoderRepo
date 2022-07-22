@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 757536966506332994}
   - component: {fileID: 757536966506332995}
   - component: {fileID: 5685677929116088357}
+  - component: {fileID: 253755029313710401}
   - component: {fileID: 757536966506332992}
   - component: {fileID: 757536966506332993}
   m_Layer: 0
@@ -57,6 +58,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 1000
+  coste: 50
+  _recarga: 8
+--- !u!114 &253755029313710401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757536966506332998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7359ea21ee16f4d8ff7254076bc2ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &757536966506332992
 MeshRenderer:
   m_ObjectHideFlags: 0
