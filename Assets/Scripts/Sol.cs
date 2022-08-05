@@ -5,7 +5,7 @@ using UnityEngine;
 public class Sol : MonoBehaviour
 {
     public GameObject sol;
-    private float timMin, tiMax=20f;
+    private float timMin, tiMax=25f;
     public void Start()
     {
         timMin = 0;
@@ -19,9 +19,13 @@ public class Sol : MonoBehaviour
 
     private void OnMouseDown()
     {
+        AgarrarSol();
+    }
+
+    public void AgarrarSol()
+    {
         GameManager.instancia.solMoneda += 25;
         Destroy(gameObject);
-
     }
 
 }
