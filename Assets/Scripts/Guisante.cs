@@ -14,6 +14,7 @@ public class Guisante : MonoBehaviour
     {
         contador = 0;
         sonidosSplash[0] = GetComponent<AudioSource>();
+        
     }
 
     private void FixedUpdate()

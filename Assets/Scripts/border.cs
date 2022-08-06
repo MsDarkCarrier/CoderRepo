@@ -20,8 +20,10 @@ public class border : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Sol>())
         {
-            collision.GetComponent<Rigidbody2D>().isKinematic = true;
+            Destroy(collision.GetComponent<Rigidbody2D>());
             collision.GetComponent<CircleCollider2D>().enabled = false;
+            
         }
+        
     }
 }

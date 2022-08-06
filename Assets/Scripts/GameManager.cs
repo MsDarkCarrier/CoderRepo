@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public Dictionary<GameObject,int> cartasJuego= new Dictionary<GameObject,int>();
     private Queue<GameObject> banderas = new Queue<GameObject>();
     private List<float> calculoPosiBanderas = new List<float>();
+    public ContenedorMundo datosJuego;
 
     void Start()
     {
@@ -58,6 +59,14 @@ public class GameManager : MonoBehaviour
     public void BarraProgreso()
     {
         cont += Time.deltaTime;
+        if (progre.sizeDelta.x >= 665f)
+        {
+            terminar = true;
+            float temp = progre.sizeDelta.x - 1;
+            progre.sizeDelta = new Vector2(temp, progre.sizeDelta.y);
+            datosJuego.nivel++;
+
+        }
         if (cont >= tiempo && !terminar)
         {
             cont = 0;
@@ -68,7 +77,7 @@ public class GameManager : MonoBehaviour
             progre.anchoredPosition = new Vector2(restaPosiBan, progre.anchoredPosition.y);
             cab.anchoredPosition = new Vector2(restaPosiCab, cab.anchoredPosition.y);
         }
-        if (progre.sizeDelta.x >= 665f) terminar = true;
+        
 
         for(int temp =0; temp<(calculoPosiBanderas.Count-1); temp++)
         {
