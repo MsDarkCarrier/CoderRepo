@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     private List<float> calculoPosiBanderas = new List<float>();
     public ContenedorMundo datosJuego;
 
-    void Start()
+    private void Start()
     {
         cont = 0;
         instancia = this;
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         calculoPosiBanderas = ObtenerCalculoBanderas();
     }
 
-    void Update()
+    private void Update()
     {
             BarraProgreso();
             texto.text = Convert.ToString(solMoneda);

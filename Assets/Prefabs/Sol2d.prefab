@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62b501f0f251e740a5924346916ad39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sol: {fileID: 2200440111702786996}
+  solPrefab: {fileID: 2200440111702786996}
 --- !u!58 &2200440111702786957
 CircleCollider2D:
   m_ObjectHideFlags: 0

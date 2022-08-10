@@ -55,7 +55,7 @@ public class Zombie : MonoBehaviour
     public void Movimiento()
     {
         direccion = objetoposi.transform.position - transform.position;
-        var movimiento = direccion.normalized * velocidad * Time.deltaTime;
+        Vector3 movimiento = direccion.normalized * velocidad * Time.deltaTime;
         transform.position = new Vector3(transform.position.x + movimiento.x, transform.position.y, transform.position.z);
         if (Vector3.Distance(transform.position, objetoposi.transform.position) <= 0.1)
         {
@@ -73,10 +73,8 @@ public class Zombie : MonoBehaviour
             Atacando(planta.GetComponent<Planta>(), comer);
             comiendo = true;
 
-
         }
     }
-
     void Atacando(Planta plant, AudioSource[] comer)
     {
 
@@ -117,20 +115,5 @@ public class Zombie : MonoBehaviour
         tiempomax = 2;
         falserelentizado = true;
     }
-
-    /*
-     * Linea 1 posiobSjet Vector3(-5f,1.153f,-4.324f)
-     * Linea 2 posiobjet Vector3(-5f,1.153f,-5.838f)
-     * Linea 3 posiobjet Vector3(-5f,1.153f,-7.256f)
-     * Linea 4 pósiobjet Vector3(-5f,1.153f,-8.665f)
-     * Linea 5 posiobjet Vector3(-5f,1.153f,-9.94f)
-     * ESTAS SON LAS POSISIONES FINALES DEL OBJETIVO DE CADA LINEA
-     * Linea 1 posiobjet Vector3(5f,1.153f,-4.324f)
-     * Linea 2 posiobjet Vector3(5f,1.153f,-5.838f)
-     * Linea 3 posiobjet Vector3(5f,1.153f,-7.256f)
-     * Linea 4 pósiobjet Vector3(5f,1.153f,-8.665f)
-     * Linea 5 posiobjet Vector3(5f,1.153f,-9.94f)
-     * SPAWN POSISIONES CADA FILA ZOMBIES
-     */
 
 }

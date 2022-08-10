@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class FallingSun : MonoBehaviour
 {
-    public Canvas canvas;
-    public RectTransform rt;
-    public GameObject SolPrefab;
+    [SerializeField]private Canvas canvas;
+    private RectTransform rt;
+    public GameObject SolPrefab2D;
     public float momentoCaida;
     public Transform lugarCaida;
-    public float tiempo;
-
+    public float tiempoSolSpawn;
     public List<Transform> tr = new List<Transform>();
 
-    void Start()
+    private void Start()
     {
         rt = canvas.GetComponent<RectTransform>();
         momentoCaida = Random.Range(5, 15);
@@ -22,18 +21,18 @@ public class FallingSun : MonoBehaviour
 
     private void Spawneo()
     {
-        tiempo += Time.deltaTime;
-        if (tiempo >= momentoCaida)
+        tiempoSolSpawn += Time.deltaTime;
+        if (tiempoSolSpawn >= momentoCaida)
         {
-            Instantiate(SolPrefab, lugarCaida);
+            Instantiate(SolPrefab2D, lugarCaida);
             momentoCaida = Random.Range(5, 15);
-            tiempo = 0;
+            tiempoSolSpawn = 0;
             lugarCaida = tr[Random.Range(1, 5)];
         }   
     }
     
 
-    void Update()
+    private void Update()
     {
         Spawneo();
 

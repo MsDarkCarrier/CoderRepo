@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Sol : MonoBehaviour
 {
-    public GameObject sol;
     private float timMin, tiMax=25f;
-    public void Start()
+    private void Start()
     {
         timMin = 0;
-        sol = gameObject;
     }
-    public void Update()
+    private void Update()
     {
         timMin += Time.deltaTime;
         if (timMin >= tiMax) Destroy(gameObject);

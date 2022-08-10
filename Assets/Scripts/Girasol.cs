@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class Girasol : MonoBehaviour
 {
-    public GameObject SolPrefab;
+    [SerializeField]private GameObject SolPrefab;
     public GameObject SolSpawn,temporal;
     public float tiempoActual = 0f;
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
@@ -24,7 +20,6 @@ public class Girasol : MonoBehaviour
         if (tiempoActual >= 24f)
         {
             temporal=Instantiate(SolPrefab, SolSpawn.transform.position, transform.rotation);
-            temporal.GetComponent<Sol>().sol = temporal;
             tiempoActual = 0f;
         }
 
