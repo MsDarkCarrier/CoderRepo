@@ -1,41 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FallingSun : MonoBehaviour
 {
-    public Canvas canvas;
-    public RectTransform rt;
-    public GameObject SolPrefab;
-    public float momentoCaida;
-    public Transform lugarCaida;
-    public float tiempo;
-
-    public List<Transform> tr = new List<Transform>();
+    public float tiempoMax;
+    public float tiempoMin;
+    public RectTransform[] limites = new RectTransform[2]; 
+    public UnityEvent <RectTransform,RectTransform>caerSoles;
 
     void Start()
     {
-        rt = canvas.GetComponent<RectTransform>();
-        momentoCaida = Random.Range(5, 15);
-        lugarCaida = tr[Random.Range(1, 5)];
-    }
-
-    private void Spawneo()
-    {
-        tiempo += Time.deltaTime;
-        if (tiempo >= momentoCaida)
-        {
-            Instantiate(SolPrefab, lugarCaida);
-            momentoCaida = Random.Range(5, 15);
-            tiempo = 0;
-            lugarCaida = tr[Random.Range(1, 5)];
-        }   
+        tiempoMax = Random.Range(5, 15);
+        caerSoles.AddListener(GameManager.instancia.CrearSoles2D);
     }
     
-
     void Update()
     {
-        Spawneo();
-
+        tiempoMin += Time.deltaTime;
+        if (tiempoMin >= tiempoMax && caerSoles!=null)
+        {
+            Debug.Log("Funcionando");
+            caerSoles.Invoke(limites[0], limites[1]);
+            tiempoMin = 0;
+        }
     }
 }

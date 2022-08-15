@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class Sol : MonoBehaviour
 {
-    public GameObject sol;
     private float timMin, tiMax=25f;
     public void Start()
     {
         timMin = 0;
-        sol = gameObject;
     }
     public void Update()
     {

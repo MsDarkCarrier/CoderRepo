@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,13 +6,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instancia;
-    public int solMoneda,barraProgreso;
+    public GameObject soles2D, soles3D,sol2Dspawn;
+    public int solMoneda, barraProgreso;
     private float cont;
     public bool terminar;
     public TextMeshProUGUI texto;
-    public RectTransform progre,cab;
+    public RectTransform progre, cab;
     public float tiempo;
-    public Dictionary<GameObject,int> cartasJuego= new Dictionary<GameObject,int>();
+    public Dictionary<GameObject, int> cartasJuego = new Dictionary<GameObject, int>();
     private Queue<GameObject> banderas = new Queue<GameObject>();
     private List<float> calculoPosiBanderas = new List<float>();
     public ContenedorMundo datosJuego;
@@ -24,8 +24,8 @@ public class GameManager : MonoBehaviour
         instancia = this;
         texto = GameObject.FindWithTag("SolesText").GetComponent<TextMeshProUGUI>();
         solMoneda = 50;
-        GameObject[]temporal= GameObject.FindGameObjectsWithTag("Banderas");
-        foreach(GameObject objeto in temporal)
+        GameObject[] temporal = GameObject.FindGameObjectsWithTag("Banderas");
+        foreach (GameObject objeto in temporal)
         {
             banderas.Enqueue(objeto);
         }
@@ -34,16 +34,16 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-            BarraProgreso();
-            texto.text = Convert.ToString(solMoneda);
+        BarraProgreso();
+        texto.text = System.Convert.ToString(solMoneda);
     }
 
     public List<float> ObtenerCalculoBanderas()
     {
-        float banderaBarraPosition, banderasGrup=0;
-        banderaBarraPosition = (665 * (100/(banderas.Count+1))) / 100;
+        float banderaBarraPosition, banderasGrup = 0;
+        banderaBarraPosition = (665 * (100 / (banderas.Count + 1))) / 100;
         List<float> tiposBanderas = new List<float>();
-        for(int temp=0; temp<=banderas.Count; temp++)
+        for (int temp = 0; temp <= banderas.Count; temp++)
         {
             banderasGrup += banderaBarraPosition;
             tiposBanderas.Add(banderasGrup);
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         if (progre.sizeDelta.x >= 665f)
         {
             terminar = true;
-            float temp = progre.sizeDelta.x - 1;
+            float temp = progre.sizeDelta.x - 1; //sizeDelta es la anchura del objeto
             progre.sizeDelta = new Vector2(temp, progre.sizeDelta.y);
             datosJuego.nivel++;
 
@@ -72,16 +72,16 @@ public class GameManager : MonoBehaviour
             cont = 0;
             float restaAnchuraBan = progre.sizeDelta.x + 0.5f;
             progre.sizeDelta = new Vector2(restaAnchuraBan, progre.sizeDelta.y);
-            float restaPosiBan = progre.anchoredPosition.x - 0.23f;
+            float restaPosiBan = progre.anchoredPosition.x - 0.23f; //anchoreposition es la posicion con respecto al mapa
             float restaPosiCab = cab.anchoredPosition.x - 0.419f;
-            progre.anchoredPosition = new Vector2(restaPosiBan, progre.anchoredPosition.y);
+            progre.anchoredPosition = new Vector2(restaPosiBan, progre.anchoredPosition.y); //esta es la posicion del transform
             cab.anchoredPosition = new Vector2(restaPosiCab, cab.anchoredPosition.y);
         }
-        
 
-        for(int temp =0; temp<(calculoPosiBanderas.Count-1); temp++)
+
+        for (int temp = 0; temp < (calculoPosiBanderas.Count - 1); temp++)
         {
-            if (Convert.ToInt32(progre.sizeDelta.x) == calculoPosiBanderas[temp]) 
+            if (System.Convert.ToInt32(progre.sizeDelta.x) == calculoPosiBanderas[temp])
             {
                 Debug.Log("Bandera:" + temp + " Alcanzada");
                 calculoPosiBanderas[temp] -= 1;
@@ -89,5 +89,19 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void CrearSoles2D(RectTransform solPositionMin, RectTransform solPositionMax)
+    {
+        sol2Dspawn.GetComponent<RectTransform>().anchoredPosition = CalcularPosiSoles(solPositionMin.anchoredPosition, solPositionMax.anchoredPosition);
+        sol2Dspawn = Instantiate(soles2D);
+        Debug.Log(CalcularPosiSoles(solPositionMin.anchoredPosition, solPositionMax.anchoredPosition));
+    }
+    public Vector2 CalcularPosiSoles(Vector2 iz,Vector2 der)
+    {
+        float posiX = Random.Range(iz.x, der.x);
+        float posiY = Random.Range(iz.y, der.y);
+        Vector2 posifinal=new Vector2(posiX,posiY);
+        return posifinal;
     }
 }
