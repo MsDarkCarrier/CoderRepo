@@ -21,7 +21,6 @@ public class FallingSun : MonoBehaviour
         tiempoMin += Time.deltaTime;
         if (tiempoMin >= tiempoMax && caerSoles!=null)
         {
-            Debug.Log("Funcionando");
             caerSoles.Invoke(limites[0], limites[1]);
             tiempoMin = 0;
         }

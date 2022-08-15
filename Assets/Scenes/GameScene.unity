@@ -2143,10 +2143,10 @@ RectTransform:
   - {fileID: 1081157440}
   - {fileID: 276237079}
   - {fileID: 96099698}
-  - {fileID: 509076672}
   - {fileID: 465339989}
-  - {fileID: 1210515642}
+  - {fileID: 509076672}
   - {fileID: 1723226610}
+  - {fileID: 1210515642}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2169,7 +2169,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soles2D: {fileID: 2200440111702786996, guid: a57137b3fb6b548438e54387baceef80, type: 3}
   soles3D: {fileID: 1584037601899516143, guid: e2d7e239187ce5541ae69f201d978454, type: 3}
-  sol2Dspawn: {fileID: 660432280}
   solMoneda: 0
   barraProgreso: 0
   terminar: 0
@@ -2474,9 +2473,8 @@ RectTransform:
   m_Children:
   - {fileID: 274429076}
   - {fileID: 15677190}
-  - {fileID: 660432281}
   m_Father: {fileID: 350146612}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3001,41 +2999,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623884908}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &660432280
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 660432281}
-  m_Layer: 5
-  m_Name: Sol2DSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &660432281
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660432280}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 465339989}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 484}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &673819196
 GameObject:
   m_ObjectHideFlags: 0
@@ -8171,7 +8134,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 350146612}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

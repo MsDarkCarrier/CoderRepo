@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Guisantes : MonoBehaviour
+public class LanzaGuizante : MonoBehaviour
 {
     private int tp = 0,contador;
     private float tiempoMin = 0, tiempoMax;

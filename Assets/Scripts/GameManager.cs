@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instancia;
-    public GameObject soles2D, soles3D,sol2Dspawn;
+    public GameObject soles2D, soles3D;
     public int solMoneda, barraProgreso;
     private float cont;
     public bool terminar;
@@ -93,8 +93,7 @@ public class GameManager : MonoBehaviour
 
     public void CrearSoles2D(RectTransform solPositionMin, RectTransform solPositionMax)
     {
-        sol2Dspawn.GetComponent<RectTransform>().anchoredPosition = CalcularPosiSoles(solPositionMin.anchoredPosition, solPositionMax.anchoredPosition);
-        sol2Dspawn = Instantiate(soles2D);
+        Instantiate(soles2D, gameObject.transform).GetComponent<RectTransform>().anchoredPosition= CalcularPosiSoles(solPositionMin.anchoredPosition, solPositionMax.anchoredPosition);
         Debug.Log(CalcularPosiSoles(solPositionMin.anchoredPosition, solPositionMax.anchoredPosition));
     }
     public Vector2 CalcularPosiSoles(Vector2 iz,Vector2 der)
