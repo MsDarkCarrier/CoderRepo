@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Sol : MonoBehaviour
 {
-    private float timMin, tiMax=25f;
+    private float timMin, tiMax = 25f;
+    public UnityEvent<ushort> recogidaSol;
     public void Start()
     {
         timMin = 0;
+        recogidaSol.AddListener(GameManager.instancia.AñadirSoles);
     }
     public void Update()
     {
@@ -17,13 +20,25 @@ public class Sol : MonoBehaviour
 
     private void OnMouseDown()
     {
-        AgarrarSol();
+        if (recogidaSol != null)
+        {
+            recogidaSol.Invoke(25);
+            Destroy(gameObject);
+        }
     }
 
-    public void AgarrarSol()
+    public void Sol2Dcontroller()
     {
-        GameManager.instancia.solMoneda += 25;
-        Destroy(gameObject);
+        if (recogidaSol != null)
+        {
+            recogidaSol.Invoke(25);
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        recogidaSol.RemoveListener(GameManager.instancia.AñadirSoles);
     }
 
 }

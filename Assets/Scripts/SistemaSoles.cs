@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class FallingSun : MonoBehaviour
+public class SistemaSoles : MonoBehaviour
 {
     public float tiempoMax;
     public float tiempoMin;
