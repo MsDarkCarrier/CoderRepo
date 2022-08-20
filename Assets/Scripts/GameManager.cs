@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource faltaSoles, sonidoPlantado;
+    [SerializeField] private AudioSource faltaSoles, sonidoPlantado,sonidoPlantadoDos;
     public static GameManager instancia;
     public Camera camera2D;
     public GameObject soles2D, soles3D;
-    public ushort solMoneda, barraProgreso;
+    public uint solMoneda, barraProgreso;
     public bool terminar;
     public TextMeshProUGUI texto;
     public ContenedorMundo datosJuego;

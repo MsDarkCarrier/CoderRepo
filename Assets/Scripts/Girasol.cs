@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,6 +36,11 @@ public class Girasol : MonoBehaviour
         temporal = Instantiate(SolPrefab, SolSpawn.transform);
         temporal.GetComponent<Rigidbody>().AddForce(Vector3.up * 200f);
         yield return new WaitForSeconds(1f);
-        Destroy(temporal.GetComponent<Rigidbody>());
+        try
+        {
+            Destroy(temporal.GetComponent<Rigidbody>());
+        }
+        catch(Exception) { }
+        
     }
 }
