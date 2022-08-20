@@ -517,8 +517,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tipGuisante: a
-  balaPlanta: {fileID: 7329839083640011428, guid: a896ec2fd90432c4abcc8951926734a1, type: 3}
+  balaPlanta: {fileID: 8019286107841218066, guid: a896ec2fd90432c4abcc8951926734a1, type: 3}
   mira: {fileID: 6982537876034532753}
+  zombie: 0
+  primeraVez: 1
   salidaDos: {fileID: 4524697819917362215}
   salida: {fileID: 3514453318288714101}
 --- !u!114 &759940878130509763
@@ -534,7 +536,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 100
-  coste: 0
   _recarga: 0
 --- !u!95 &661706153
 Animator:

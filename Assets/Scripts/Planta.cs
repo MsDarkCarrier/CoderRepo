@@ -7,7 +7,6 @@ public class Planta : MonoBehaviour
 {
 
     public float vida;
-    public float coste;
     public enum VelocidadRecarga
     {
         Rapida=8,

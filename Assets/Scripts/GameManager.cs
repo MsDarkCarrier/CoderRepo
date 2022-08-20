@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private AudioSource faltaSoles, sonidoPlantado;
     public static GameManager instancia;
     public Camera camera2D;
     public GameObject soles2D, soles3D;
@@ -49,5 +50,19 @@ public class GameManager : MonoBehaviour
     public Vector3 MousePosition()
     {
         return camera2D.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    public IEnumerator FaltanSoles()
+    {
+        faltaSoles.enabled = true;
+        yield return new WaitForSeconds(1);
+        faltaSoles.enabled = false;
+    }
+
+    public IEnumerator SonidoPlantado()
+    {
+        sonidoPlantado.enabled = true;
+        yield return new WaitForSeconds(1);
+        sonidoPlantado.enabled = false;
     }
 }

@@ -23,10 +23,18 @@ public class Girasol : MonoBehaviour
         tiempoActual += Time.deltaTime;
         if (tiempoActual >= 24f)
         {
-            temporal=Instantiate(SolPrefab, SolSpawn.transform.position, transform.rotation);
+            StartCoroutine(FisicaSoles());
             tiempoActual = 0f;
         }
 
 
+    }
+
+    IEnumerator FisicaSoles()
+    {
+        temporal = Instantiate(SolPrefab, SolSpawn.transform);
+        temporal.GetComponent<Rigidbody>().AddForce(Vector3.up * 200f);
+        yield return new WaitForSeconds(1f);
+        Destroy(temporal.GetComponent<Rigidbody>());
     }
 }
