@@ -9,7 +9,7 @@ public class LanzaGuizante : MonoBehaviour
     public string tipGuisante;
     public GameObject balaPlanta, mira;
     private GameObject[] balas;
-    private bool zombie, primeraVez = true;
+    [SerializeField]private bool zombie, primeraVez = true;
     public AudioSource salidaDos, salida;
 
     private void Awake()

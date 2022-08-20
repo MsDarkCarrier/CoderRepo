@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instancia;
+    public Camera camera2D;
     public GameObject soles2D, soles3D;
     public ushort solMoneda, barraProgreso;
     public bool terminar;
@@ -38,5 +39,15 @@ public class GameManager : MonoBehaviour
     public void AñadirSoles(ushort cantidad)
     {
         solMoneda += cantidad;
+    }
+
+    public void EliminarSoles(ushort cantidad)
+    {
+        solMoneda -= cantidad;
+    }
+
+    public Vector3 MousePosition()
+    {
+        return camera2D.ScreenToWorldPoint(Input.mousePosition);
     }
 }
