@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class CartaMode : MonoBehaviour
 {
@@ -57,12 +56,16 @@ public class CartaMode : MonoBehaviour
     {
         if (!precionando)
         {
-            if(GameManager.instancia.solMoneda >= Convert.ToUInt16(textoCostoPlanta.text)) precionando = true;
-            else
-            {
-               StartCoroutine(GameManager.instancia.FaltanSoles());
-            }
+            if (GameManager.instancia.solMoneda >= Convert.ToUInt16(textoCostoPlanta.text)) precionando = true;
+             
         }
+        
+    }
+
+    public void FaltanSoles()
+    {
+
+        if (costoPlanta>=GameManager.instancia.solMoneda) StartCoroutine(GameManager.instancia.FaltanSoles());
         
     }
 }

@@ -8,7 +8,7 @@ public class Zombie : MonoBehaviour
     public AudioSource[] comer = new AudioSource[4];
     GameObject objetoposi, planta;
     public Vector3 posiobjet, direccion;
-    private bool activador = true, comiendo = false, falserelentizado = false;
+    private bool comiendo = false;
 
     void Start()
     {
@@ -47,7 +47,6 @@ public class Zombie : MonoBehaviour
         {
             comiendo = false;
             velocidad = velociCompro;
-            activador = false;
         }
 
     }
@@ -107,16 +106,6 @@ public class Zombie : MonoBehaviour
         plant.vida -= daño;
     }
 
-    public IEnumerator CongeladoTime()
-    {
-        velocidad /= 2;
-        tiempomax /= 2;
-        falserelentizado = false;
-        yield return new WaitForSeconds(tiemporelentizado);
-        velocidad = 2;
-        tiempomax = 2;
-        falserelentizado = true;
-    }
 
     /*
      * Linea 1 posiobSjet Vector3(-5f,1.153f,-4.324f)

@@ -8,6 +8,8 @@ TagManager:
   - Planta
   - SolesText
   - Banderas
+  - SpawnZombies
+  - CasillasPlantas
   layers:
   - Default
   - TransparentFX

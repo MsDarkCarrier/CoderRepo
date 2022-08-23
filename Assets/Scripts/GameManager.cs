@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource faltaSoles, sonidoPlantado,sonidoPlantadoDos;
+    [SerializeField] private AudioSource faltaSoles, sonidoPlantado, recogidaSol, recogidaSolDos;
     public static GameManager instancia;
     public Camera camera2D;
     public GameObject soles2D, soles3D;
@@ -28,17 +28,19 @@ public class GameManager : MonoBehaviour
 
     public void CrearSoles2D(RectTransform solPositionMin, RectTransform solPositionMax)
     {
-        Instantiate(soles2D, gameObject.transform).GetComponent<RectTransform>().anchoredPosition= CalcularPosiSoles(solPositionMin.anchoredPosition, solPositionMax.anchoredPosition);
+        Instantiate(soles2D, gameObject.transform).GetComponent<RectTransform>().anchoredPosition = CalcularPosiSoles(solPositionMin.anchoredPosition, solPositionMax.anchoredPosition);
     }
-    public Vector2 CalcularPosiSoles(Vector2 iz,Vector2 der)
+    public Vector2 CalcularPosiSoles(Vector2 iz, Vector2 der)
     {
         float posiX = Random.Range(iz.x, der.x);
         float posiY = Random.Range(iz.y, der.y);
-        Vector2 posifinal=new Vector2(posiX,posiY);
+        Vector2 posifinal = new Vector2(posiX, posiY);
         return posifinal;
     }
     public void AñadirSoles(ushort cantidad)
     {
+        if (recogidaSol.enabled == false) StartCoroutine(SonidoSol());
+        else StartCoroutine(SonidoSolDos());
         solMoneda += cantidad;
     }
 
@@ -64,5 +66,26 @@ public class GameManager : MonoBehaviour
         sonidoPlantado.enabled = true;
         yield return new WaitForSeconds(1);
         sonidoPlantado.enabled = false;
+    }
+
+    public IEnumerator SonidoSol()
+    {
+        recogidaSol.enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        recogidaSol.enabled = false;
+    }
+
+    public IEnumerator SonidoSolDos()
+    {
+        recogidaSolDos.enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        recogidaSolDos.enabled = false;
+    }
+
+    public int SpawnZombies(GameObject[]listaZombies)
+    {
+        int varAleatoria = Random.Range(0,listaZombies.Length);
+        return varAleatoria;
+
     }
 }

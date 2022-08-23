@@ -8,11 +8,9 @@ public class Guisante : MonoBehaviour
     public Vector3 inicio;
     public bool activador = true, otro = false,hielo=false;
     public AudioSource[] sonidosSplash=new AudioSource[3];
-    private uint contador;
 
     private void Awake()
     {
-        contador = 0;
         sonidosSplash[0] = GetComponent<AudioSource>();
         
     }
