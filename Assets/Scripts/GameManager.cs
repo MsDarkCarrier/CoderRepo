@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         Vector2 posifinal = new Vector2(posiX, posiY);
         return posifinal;
     }
-    public void AñadirSoles(ushort cantidad)
+    public void AñadirSoles(uint cantidad)
     {
         if (recogidaSol.enabled == false) StartCoroutine(SonidoSol());
         else StartCoroutine(SonidoSolDos());

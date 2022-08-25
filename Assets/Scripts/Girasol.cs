@@ -33,12 +33,17 @@ public class Girasol : MonoBehaviour
 
     IEnumerator FisicaSoles()
     {
-        temporal = Instantiate(SolPrefab, SolSpawn.transform);
-        temporal.GetComponent<Rigidbody>().AddForce(Vector3.up * 200f);
+        temporal = Instantiate(SolPrefab);
+        temporal.GetComponent<Animator>().enabled = false;
+        temporal.transform.position = SolSpawn.transform.position;
+        temporal.GetComponent<Rigidbody>().AddForce(Vector3.up * 500f);
         yield return new WaitForSeconds(1f);
         try
         {
             Destroy(temporal.GetComponent<Rigidbody>());
+            temporal.GetComponent<Animator>().enabled = true;
+            temporal.GetComponent<Animator>().SetBool("mov", true);
+
         }
         catch(Exception) { }
         

@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b4a2eeb3d76af4999bbce45a7d82b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabPlanta: {fileID: 6982537876226702216, guid: 917e6349d772bfe41bea391e795bf74b, type: 3}
+  prefabPlanta: {fileID: 6568719625431596984, guid: 917e6349d772bfe41bea391e795bf74b, type: 3}
   textoCostoPlanta: {fileID: 161699314858169535}
   casilla: 1
   costoPlanta: 0

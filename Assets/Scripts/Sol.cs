@@ -6,11 +6,18 @@ using UnityEngine.Events;
 public class Sol : MonoBehaviour
 {
     private float timMin, tiMax = 25f;
-    public UnityEvent<ushort> recogidaSol;
+    public UnityEvent<uint> recogidaSol;
     public void Start()
     {
         timMin = 0;
-        recogidaSol.AddListener(GameManager.instancia.AñadirSoles);
+        try
+        {
+            recogidaSol.AddListener(GameManager.instancia.AñadirSoles);
+        }
+        catch (System.Exception) 
+        { 
+        }
+        
     }
     public void Update()
     {
@@ -22,7 +29,7 @@ public class Sol : MonoBehaviour
     {
         if (recogidaSol != null)
         {
-            recogidaSol.Invoke(25);
+            GameManager.instancia.AñadirSoles(25);
             Destroy(gameObject);
         }
     }
