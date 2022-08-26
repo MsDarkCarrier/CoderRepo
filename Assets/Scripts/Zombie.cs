@@ -106,20 +106,4 @@ public class Zombie : MonoBehaviour
         plant.vida -= daño;
     }
 
-
-    /*
-     * Linea 1 posiobSjet Vector3(-5f,1.153f,-4.324f)
-     * Linea 2 posiobjet Vector3(-5f,1.153f,-5.838f)
-     * Linea 3 posiobjet Vector3(-5f,1.153f,-7.256f)
-     * Linea 4 pósiobjet Vector3(-5f,1.153f,-8.665f)
-     * Linea 5 posiobjet Vector3(-5f,1.153f,-9.94f)
-     * ESTAS SON LAS POSISIONES FINALES DEL OBJETIVO DE CADA LINEA
-     * Linea 1 posiobjet Vector3(5f,1.153f,-4.324f)
-     * Linea 2 posiobjet Vector3(5f,1.153f,-5.838f)
-     * Linea 3 posiobjet Vector3(5f,1.153f,-7.256f)
-     * Linea 4 pósiobjet Vector3(5f,1.153f,-8.665f)
-     * Linea 5 posiobjet Vector3(5f,1.153f,-9.94f)
-     * SPAWN POSISIONES CADA FILA ZOMBIES
-     */
-
 }

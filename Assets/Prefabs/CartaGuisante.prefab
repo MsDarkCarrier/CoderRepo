@@ -55,9 +55,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabPlanta: {fileID: 6568719625431596984, guid: 917e6349d772bfe41bea391e795bf74b, type: 3}
-  textoCostoPlanta: {fileID: 161699314858169535}
+  costoPlanta: 100
   casilla: 1
-  costoPlanta: 0
   precionando: 0
 --- !u!222 &649006035828398618
 CanvasRenderer:

@@ -336,6 +336,7 @@ GameObject:
   - component: {fileID: 3073920421980649671}
   - component: {fileID: 3073920421980649673}
   - component: {fileID: 3073920421980649672}
+  - component: {fileID: 2547711700850336061}
   m_Layer: 0
   m_Name: NuezCont
   m_TagString: Untagged
@@ -373,8 +374,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.024017114, y: 0.019271294, z: 0.022314465}
-  m_Center: {x: 0.002437827, y: 0.0005004579, z: 0.0023685347}
+  m_Size: {x: 0.019972147, y: 0.019271294, z: 0.023980586}
+  m_Center: {x: 0.00041532787, y: 0.0005004582, z: 0.00819998}
 --- !u!114 &3073920421980649673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,6 +402,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7359ea21ee16f4d8ff7254076bc2ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &2547711700850336061
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3073920421980649669}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &3073920421556806624
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,9 +8,8 @@ public class CartaMode : MonoBehaviour
 {
     public GameObject prefabPlanta;
     private GameObject plantaCreada;
-    public TextMeshProUGUI textoCostoPlanta;
+    [SerializeField]private uint costoPlanta;
     public bool casilla;
-    public int costoPlanta;
     [SerializeField] private bool precionando;
 
     private void Start()
@@ -38,14 +37,8 @@ public class CartaMode : MonoBehaviour
 
             if (Input.GetMouseButtonUp(0))
             {
-                if (casilla)
-                {
-                    StartCoroutine(GameManager.instancia.SonidoPlantado());
-                    Instantiate(prefabPlanta).transform.position= GameManager.instancia.MousePosition();
-                    GameManager.instancia.EliminarSoles(Convert.ToUInt16(textoCostoPlanta.text));
-                    Destroy(plantaCreada);
-                }
-                else Destroy(plantaCreada);
+                GameManager.instancia.CasillaControler(prefabPlanta, costoPlanta);
+                Destroy(plantaCreada);
                 precionando = false;
             }
 
@@ -56,7 +49,7 @@ public class CartaMode : MonoBehaviour
     {
         if (!precionando)
         {
-            if (GameManager.instancia.solMoneda >= Convert.ToUInt16(textoCostoPlanta.text)) precionando = true;
+            if (GameManager.instancia.solMoneda >= costoPlanta) precionando = true;
              
         }
         

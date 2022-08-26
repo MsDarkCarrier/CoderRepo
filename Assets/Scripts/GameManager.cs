@@ -13,12 +13,15 @@ public class GameManager : MonoBehaviour
     public bool terminar;
     public TextMeshProUGUI texto;
     public ContenedorMundo datosJuego;
+    [SerializeField] private GameObject[] casiPos = new GameObject[30];
 
     void Start()
     {
         instancia = this;
         texto = GameObject.FindWithTag("SolesText").GetComponent<TextMeshProUGUI>();
         solMoneda = 50;
+        casiPos = GameObject.FindGameObjectsWithTag("CasillasPlantas");
+
     }
 
     void Update()
@@ -44,7 +47,7 @@ public class GameManager : MonoBehaviour
         solMoneda += cantidad;
     }
 
-    public void EliminarSoles(ushort cantidad)
+    public void EliminarSoles(uint cantidad)
     {
         solMoneda -= cantidad;
     }
@@ -86,6 +89,29 @@ public class GameManager : MonoBehaviour
     {
         int varAleatoria = Random.Range(0,listaZombies.Length);
         return varAleatoria;
+
+    }
+
+    public void CasillaControler(GameObject prefabPlantaPosition,uint costoPlanta)
+    {
+        foreach (GameObject tem in casiPos)
+        {
+            if (Vector3.Distance(tem.transform.position, MousePosition()) <= 0.5f && tem.GetComponent<CasillaPosition>().disponible)
+            {
+                StartCoroutine(SonidoPlantado());
+                EliminarSoles(costoPlanta);
+                GameObject plantaCreada = Instantiate(prefabPlantaPosition);
+                if (plantaCreada.GetComponent<LanzaGuizante>())
+                {
+                    Vector3 tempdos= new Vector3(tem.transform.position.x, tem.transform.position.y + 0.1f, tem.transform.position.z);
+                    plantaCreada.transform.position = tempdos;
+                }else plantaCreada.transform.position = tem.transform.position;
+
+
+                plantaCreada.tag = "Planta";
+                
+            }
+        }
 
     }
 }

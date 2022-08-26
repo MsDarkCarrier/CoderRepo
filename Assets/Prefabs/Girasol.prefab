@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 8515699635708240346}
   - component: {fileID: 8515699635708240340}
   - component: {fileID: 8515699635708240341}
+  - component: {fileID: 3250764951113287627}
   m_Layer: 0
   m_Name: Girasol
   m_TagString: Untagged
@@ -78,8 +79,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.032348014, y: 0.028142855, z: 0.042709164}
-  m_Center: {x: -0.0018553649, y: -0.00076668465, z: -0.009303733}
+  m_Size: {x: 0.034855526, y: 0.026020521, z: 0.03950138}
+  m_Center: {x: -0.0006016091, y: 0.002314208, z: 0.01499541}
 --- !u!114 &8515699635708240340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,6 +111,22 @@ MonoBehaviour:
   SolSpawn: {fileID: 8515699635306191272}
   temporal: {fileID: 0}
   tiempoActual: 0
+--- !u!54 &3250764951113287627
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8515699635708240344}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8515699636061372980
 GameObject:
   m_ObjectHideFlags: 0
