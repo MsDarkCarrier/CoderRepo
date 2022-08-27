@@ -98,20 +98,30 @@ public class GameManager : MonoBehaviour
         {
             if (Vector3.Distance(tem.transform.position, MousePosition()) <= 0.5f && tem.GetComponent<CasillaPosition>().disponible)
             {
+                
                 StartCoroutine(SonidoPlantado());
                 EliminarSoles(costoPlanta);
                 GameObject plantaCreada = Instantiate(prefabPlantaPosition);
                 if (plantaCreada.GetComponent<LanzaGuizante>())
                 {
                     Vector3 tempdos= new Vector3(tem.transform.position.x, tem.transform.position.y + 0.1f, tem.transform.position.z);
-                    plantaCreada.transform.position = tempdos;
-                }else plantaCreada.transform.position = tem.transform.position;
-
-
+                    plantaCreada.transform.position = tempdos;  
+                }
+                else plantaCreada.transform.position = tem.transform.position;
+                tem.GetComponent<CasillaPosition>().platnaSobreMi = plantaCreada;
                 plantaCreada.tag = "Planta";
                 
             }
         }
 
+    }
+
+    public void CasillaController(GameObject plantaSobreCasilla,CasillaPosition estaCasilla)
+    {
+        if (plantaSobreCasilla == null)
+        {
+           estaCasilla.disponible = true;
+            Debug.Log("Planta eliminada");
+        }
     }
 }
