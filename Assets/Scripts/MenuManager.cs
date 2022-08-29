@@ -22,7 +22,7 @@ public class MenuManager : MonoBehaviour
     {
         if (datosJuego.nivel == 0)
         {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene(1,LoadSceneMode.Single);
         }
 
     }

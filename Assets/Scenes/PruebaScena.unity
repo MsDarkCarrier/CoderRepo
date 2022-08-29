@@ -1039,6 +1039,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 404462629}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &144486171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,6 +1105,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 1293903017}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &144486175
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4152,6 +4160,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 628011804}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &269737377
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4382,7 +4394,7 @@ MonoBehaviour:
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -6142,6 +6154,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 891162883}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &373812607
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6253,6 +6269,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 388197983}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &378145371
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10546,6 +10566,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 233681982}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &510174643
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11961,6 +11985,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 136122943}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &647474257
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12108,6 +12136,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 1490101448}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &671657148
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12568,6 +12600,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 220159428}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &748342929
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12944,6 +12980,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 729862749}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &820661987
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13055,6 +13095,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 1904132700}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &864847112
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13323,6 +13367,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 124181255}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &876585847
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13538,6 +13586,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 1768998864}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &898789401
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15358,6 +15410,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 535002202}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1053305288
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18217,6 +18273,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 1500512531}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1199222633
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18512,6 +18572,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 1188362862}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1216105158
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18766,6 +18830,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 2114545667}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1270308189
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19146,6 +19214,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 1953951374}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1319116428
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19323,6 +19395,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 903641440}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1402892621
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19434,6 +19510,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 1419597587}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1416464025
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20966,6 +21046,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 992427728}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1450484798
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21137,6 +21221,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 867759565}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1503379782
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21312,6 +21400,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 2007604343}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1532367404
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21423,6 +21515,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 1521216006}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1532858499
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21534,6 +21630,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 1702750099}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1561166594
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21780,6 +21880,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 1267093871}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1684321766
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22228,6 +22332,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 1602563890}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1819081566
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22570,6 +22678,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 99226540}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1871205548
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25707,6 +25819,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 429280184}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1980965298
 GameObject:
   m_ObjectHideFlags: 0
@@ -25769,6 +25885,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disponible: 0
   objetivoPlantado: {fileID: 1161091052}
+  platnaSobreMi: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1980965302
 MeshRenderer:
   m_ObjectHideFlags: 0
