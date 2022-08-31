@@ -10,6 +10,7 @@ TagManager:
   - Banderas
   - SpawnZombies
   - CasillasPlantas
+  - Luces
   layers:
   - Default
   - TransparentFX
