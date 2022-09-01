@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    public float vida, daño, velocidad, velociCompro, tiempomax = 0.5f, timpmin, tiemporelentizado = 6f;
+    public float vida, dano, velocidad, velociCompro, tiempomax = 0.5f, timpmin, tiemporelentizado = 6f;
     public AudioSource[] comer = new AudioSource[4];
     GameObject objetoposi, planta;
     public Vector3 posiobjet, direccion;
@@ -103,7 +103,7 @@ public class Zombie : MonoBehaviour
             comer[3].enabled = false;
             comer[3].enabled = true;
         }
-        plant.vida -= daño;
+        plant.vida -= dano;
     }
 
 }
