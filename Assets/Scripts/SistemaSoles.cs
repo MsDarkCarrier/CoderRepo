@@ -18,11 +18,15 @@ public class SistemaSoles : MonoBehaviour
     
     void Update()
     {
-        tiempoMin += Time.deltaTime;
-        if (tiempoMin >= tiempoMax && caerSoles!=null)
+        if (GameManager.instancia.contenedorJugable.activeInHierarchy)
         {
-            caerSoles.Invoke(limites[0], limites[1]);
-            tiempoMin = 0;
+            tiempoMin += Time.deltaTime;
+            if (tiempoMin >= tiempoMax && caerSoles != null)
+            {
+                caerSoles.Invoke(limites[0], limites[1]);
+                tiempoMin = 0;
+            }
         }
+
     }
 }

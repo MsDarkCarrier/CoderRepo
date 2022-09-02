@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject contenedorJugable;
     [SerializeField] private AudioSource faltaSoles, sonidoPlantado, recogidaSol, recogidaSolDos;
+    public AudioSource musicaAmbiente;
     public static GameManager instancia;
     public Camera camera2D;
     public GameObject soles2D, soles3D;
@@ -18,7 +20,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         instancia = this;
-        texto = GameObject.FindWithTag("SolesText").GetComponent<TextMeshProUGUI>();
+        if(contenedorJugable.activeInHierarchy) texto = GameObject.FindWithTag("SolesText").GetComponent<TextMeshProUGUI>();
         solMoneda = 50;
         casiPos = GameObject.FindGameObjectsWithTag("CasillasPlantas");
 
