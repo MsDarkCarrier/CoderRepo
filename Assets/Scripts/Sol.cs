@@ -21,13 +21,37 @@ public class Sol : MonoBehaviour
     }
     public void Update()
     {
-        timMin += Time.deltaTime;
-        if (timMin >= tiMax) Destroy(gameObject);
+        if (!GameManager.instancia.pausa)
+        {
+            try
+            {
+                if (GetComponent<Rigidbody2D>().bodyType == RigidbodyType2D.Static && GetComponent<Rigidbody2D>() != null) GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            }
+            catch (System.Exception)
+            {
+
+            }
+
+            timMin += Time.deltaTime;
+            if (timMin >= tiMax) Destroy(gameObject);
+        }
+        else
+        {
+            try
+            {
+                if (GetComponent<Rigidbody2D>().bodyType != RigidbodyType2D.Static && GetComponent<Rigidbody2D>() != null) GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            }
+            catch (System.Exception)
+            {
+
+            }
+            
+        }
     }
 
     private void OnMouseDown()
     {
-        if (recogidaSol != null)
+        if (recogidaSol != null&& !GameManager.instancia.pausa)
         {
             GameManager.instancia.AñadirSoles(25);
             Destroy(gameObject);
@@ -36,7 +60,7 @@ public class Sol : MonoBehaviour
 
     public void Sol2Dcontroller()
     {
-        if (recogidaSol != null)
+        if (recogidaSol != null&& !GameManager.instancia.pausa)
         {
             recogidaSol.Invoke(25);
             Destroy(gameObject);

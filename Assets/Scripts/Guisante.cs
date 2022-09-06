@@ -17,8 +17,11 @@ public class Guisante : MonoBehaviour
 
     private void FixedUpdate()
     {
-        var movimiento = Vector3.right * velocidad * Time.deltaTime;
-        transform.position = new Vector3(transform.position.x + movimiento.x, transform.position.y, transform.position.z);
+        if (!GameManager.instancia.pausa)
+        {
+            Vector3 movimiento = Vector3.right * velocidad * Time.deltaTime;
+            transform.position = new Vector3(transform.position.x + movimiento.x, transform.position.y, transform.position.z);
+        }
     }
 
     // Update is called once per frame CAMBIANDO COSITAS

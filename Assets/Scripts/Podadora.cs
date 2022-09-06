@@ -11,10 +11,9 @@ public class Podadora : MonoBehaviour
     {
         salida = gameObject.GetComponent<AudioSource>();
     }
-
-    void Update()
+    private void FixedUpdate()
     {
-        if (activo) MoverMorir();
+        if (activo&&!GameManager.instancia.pausa) MoverMorir();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,7 +30,6 @@ public class Podadora : MonoBehaviour
 
 
     }
-
     public void MoverMorir()
     {
         var movimiento = Vector3.right * 2f * Time.deltaTime;
@@ -42,7 +40,7 @@ public class Podadora : MonoBehaviour
     IEnumerator PodadoraMorirTime()
     {
         otro = true;
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         Destroy(this.gameObject);
     }
 

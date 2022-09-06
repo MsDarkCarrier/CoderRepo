@@ -12,13 +12,14 @@ public class GameManager : MonoBehaviour
     public Camera camera2D;
     public GameObject soles2D, soles3D;
     public uint solMoneda, barraProgreso;
-    public bool terminar;
+    public bool terminar,pausa;
     public TextMeshProUGUI texto;
     public ContenedorMundo datosJuego;
     [SerializeField] private GameObject[] casiPos = new GameObject[30];
 
     void Start()
     {
+        pausa = false;
         instancia = this;
         if(contenedorJugable.activeInHierarchy) texto = GameObject.FindWithTag("SolesText").GetComponent<TextMeshProUGUI>();
         solMoneda = 50;

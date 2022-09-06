@@ -15,8 +15,11 @@ public class Girasol : MonoBehaviour
 
     void Update()
     {
-        if (GetComponent<Planta>().vida <= 0) Destroy(gameObject);
-        ComienzaTiempo();
+        if (!GameManager.instancia.pausa) 
+        {
+            if (GetComponent<Planta>().vida <= 0) Destroy(gameObject);
+            ComienzaTiempo();
+        }
     }
 
     void ComienzaTiempo()

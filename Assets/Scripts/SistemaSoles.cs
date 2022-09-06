@@ -18,7 +18,7 @@ public class SistemaSoles : MonoBehaviour
     
     void Update()
     {
-        if (GameManager.instancia.contenedorJugable.activeInHierarchy)
+        if (GameManager.instancia.contenedorJugable.activeInHierarchy && !GameManager.instancia.pausa)
         {
             tiempoMin += Time.deltaTime;
             if (tiempoMin >= tiempoMax && caerSoles != null)

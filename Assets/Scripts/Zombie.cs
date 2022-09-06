@@ -24,31 +24,33 @@ public class Zombie : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Movimiento();
+       if(!GameManager.instancia.pausa) Movimiento();
     }
     void Update()
     {
-        if (vida <= 0)
+        if (!GameManager.instancia.pausa)
         {
-            Destroy(objetoposi);
-            Destroy(this.gameObject);
-        }
-
-        if (comiendo && planta != null)
-        {
-            timpmin += Time.deltaTime;
-            if (timpmin >= tiempomax)
+            if (vida <= 0)
             {
-                Atacando(planta.GetComponent<Planta>(), comer);
-                timpmin = 0;
+                Destroy(objetoposi);
+                Destroy(this.gameObject);
+            }
+
+            if (comiendo && planta != null)
+            {
+                timpmin += Time.deltaTime;
+                if (timpmin >= tiempomax)
+                {
+                    Atacando(planta.GetComponent<Planta>(), comer);
+                    timpmin = 0;
+                }
+            }
+            else
+            {
+                comiendo = false;
+                velocidad = velociCompro;
             }
         }
-        else
-        {
-            comiendo = false;
-            velocidad = velociCompro;
-        }
-
     }
 
     public void Movimiento()
@@ -65,7 +67,7 @@ public class Zombie : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Planta>())
+        if (other.gameObject.GetComponent<Planta>()&&!GameManager.instancia.pausa)
         {
             velocidad = 0;
             planta = other.gameObject;

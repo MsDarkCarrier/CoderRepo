@@ -26,7 +26,7 @@ public class BarraProgrecion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        BarraProgreso();
+        if(!GameManager.instancia.pausa) BarraProgreso();
     }
 
     public List<float> ObtenerCalculoBanderas()

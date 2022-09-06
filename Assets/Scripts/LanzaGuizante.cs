@@ -33,28 +33,31 @@ public class LanzaGuizante : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GetComponent<Planta>().vida <= 0)
+        if (!GameManager.instancia.pausa)
         {
-            for (int x = 0; x < balas.Length; x++)
+            if (GetComponent<Planta>().vida <= 0)
             {
-                if (!balas[x].activeInHierarchy) Destroy(balas[x]); else balas[x].GetComponent<Guisante>().inicio = new Vector3(0, 0, 0);
+                for (int x = 0; x < balas.Length; x++)
+                {
+                    if (!balas[x].activeInHierarchy) Destroy(balas[x]); else balas[x].GetComponent<Guisante>().inicio = new Vector3(0, 0, 0);
+                }
+                Destroy(this.gameObject);
             }
-            Destroy(this.gameObject);
-        }
-        DetectorZombie();
-        if (zombie)
-        {
-            tiempoMax = Random.Range(1,1.9f);
-            if (primeraVez)
+            DetectorZombie();
+            if (zombie)
             {
-                primeraVez = false;
-                StartCoroutine(TiempoMicro());
-            }
-            tiempoMin += Time.deltaTime;
-            if (tiempoMin >= tiempoMax)
-            {
-                StartCoroutine(TiempoMicro());
-                tiempoMin = 0;
+                tiempoMax = Random.Range(1, 1.9f);
+                if (primeraVez)
+                {
+                    primeraVez = false;
+                    StartCoroutine(TiempoMicro());
+                }
+                tiempoMin += Time.deltaTime;
+                if (tiempoMin >= tiempoMax)
+                {
+                    StartCoroutine(TiempoMicro());
+                    tiempoMin = 0;
+                }
             }
         }
     }
