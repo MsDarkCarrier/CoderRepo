@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -3937691442724040005}
   m_Layer: 5
   m_Name: Sol2d
-  m_TagString: Untagged
+  m_TagString: Soles2D
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

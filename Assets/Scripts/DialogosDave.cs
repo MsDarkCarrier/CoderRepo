@@ -5,24 +5,27 @@ using System.Collections;
 
 public class DialogosDave : MonoBehaviour
 {
-    bool dialogo;
+    private bool dialogo;
+    private float duracion=0;
     [SerializeField] private TextMeshProUGUI textoPreparado,textDialogo;
     private Queue<string> dialogos=new Queue<string>();
-    [SerializeField] private GameObject cuadroDialogo,dave;
+    [SerializeField] private GameObject cuadroDialogo,dave,botSaltar;
     [SerializeField] private AudioSource sonidosPam,dialogoMusica;
     [SerializeField]private AudioSource[] daveSon = new AudioSource[11];
     private int varSonido;
+    [SerializeField]private bool saltar;
     private enum iniciar
     {
         PREPARADO=0,
         LISTO=1,
         PLANTA=2
     }
-    private float min=0f;
+    [SerializeField]private float min=0f;
     private iniciar comprobador;
     // Start is called before the first frame update
     void Start()
     {
+        saltar=false;
         dialogo = true;
         textoPreparado.enabled = true;
         ConversionEnum(0);
@@ -69,6 +72,11 @@ public class DialogosDave : MonoBehaviour
 
 
     }
+    public void BotSaltar()
+    {
+        min=30;
+        saltar=true;
+    }
     public void ConversionEnum(int face)
     {
         comprobador=(iniciar)face;
@@ -101,87 +109,90 @@ public class DialogosDave : MonoBehaviour
 
                     case ("Buenos Dìas vecino"):
                         cuadroDialogo.SetActive(true);
-                        StartCoroutine(AudioDaveControl(daveSon[0], 1.12f));
-                        min = 0;
+                        botSaltar.SetActive(true);
+                        duracion= (!saltar)? 1.2f:0;
+                        StartCoroutine(AudioDaveControl(daveSon[0], duracion));
+                        if(!saltar)min = 0;
                         break;
 
 
                     case ("Me llamo dave, dave el loco"):
-                        cuadroDialogo.SetActive(true);
-                        StartCoroutine(AudioDaveControl(daveSon[1], 1.50f));
-                        min = 0;
+                        duracion= (!saltar)? 1.5f:0;
+                        StartCoroutine(AudioDaveControl(daveSon[1], duracion));
+                        if(!saltar)min = 0;
                         break;
 
                     case ("Pero puedes llamarme solo dave el loco"):
-                        cuadroDialogo.SetActive(true);
-                        StartCoroutine(AudioDaveControl(daveSon[2], 1.45f));
-                        min = 0;
+                        duracion= (!saltar)? 1.45f:0;
+                        StartCoroutine(AudioDaveControl(daveSon[2], duracion));
+                        if(!saltar)min = 0;
                         break;
 
                     case ("Bueno venía a decirte una cosita"):
-                        cuadroDialogo.SetActive(true);
-                        StartCoroutine(AudioDaveControl(daveSon[3], 1.35f));
-                        min = 0;
+                        duracion= (!saltar)? 1.35f:0;
+                        StartCoroutine(AudioDaveControl(daveSon[3], duracion));
+                        if(!saltar)min = 0;
                         break;
 
 
                     case ("Esta es la primera beta publica del plantas vs zombies en 3D"):
-                        cuadroDialogo.SetActive(true);
-                        StartCoroutine(AudioDaveControl(daveSon[4], 2.5f));
-                        min = 0;
+                        duracion= (!saltar)? 2.5f:0;
+                        StartCoroutine(AudioDaveControl(daveSon[4], duracion));
+                        if(!saltar)min = 0;
                         break;
 
 
                     case ("Mal royo"):
-                        cuadroDialogo.SetActive(true);
-                        StartCoroutine(AudioDaveControl(daveSon[5], 1.12f));
-                        min = 0;
+                        duracion= (!saltar)? 1.12f:0;
+                        StartCoroutine(AudioDaveControl(daveSon[5], duracion));
+                        if(!saltar)min = 0;
                         break;
 
                     case ("Puede que este plagado de cosas que no deberían estar allí"):
-                        cuadroDialogo.SetActive(true);
-                        StartCoroutine(AudioDaveControl(daveSon[6], 2.5f));
-                        min = 0;
+                        duracion= (!saltar)? 2.5f:0;
+                        StartCoroutine(AudioDaveControl(daveSon[6], duracion));
+                        if(!saltar)min = 0;
                         break;
 
                     case ("¿Que cosas?"):
-                        cuadroDialogo.SetActive(true);
-                        StartCoroutine(AudioDaveControl(daveSon[7], 1.10f));
-                        min = 0;
+                        duracion= (!saltar)? 1.10f:0;
+                        StartCoroutine(AudioDaveControl(daveSon[7], duracion));
+                        if(!saltar)min = 0;
                         break;
 
                     case ("Quien sabe"):
-                        cuadroDialogo.SetActive(true);
-                        StartCoroutine(AudioDaveControl(daveSon[8], 1.10f));
-                        min = 0;
+                        duracion= (!saltar)? 1.10f:0;
+                        StartCoroutine(AudioDaveControl(daveSon[8], duracion));
+                        if(!saltar)min = 0;
                         break;
 
                     case ("Pero no te preocupes, aquí tienes unos cuantos paquetes de semillas, y esta nuez"):
-                        cuadroDialogo.SetActive(true);
-                        StartCoroutine(AudioDaveControl(daveSon[9], 2.5f));
-                        min = 0;
+                        duracion= (!saltar)? 2.5f:0;
+                        StartCoroutine(AudioDaveControl(daveSon[9], duracion));
+                        if(!saltar)min = 0;
                         break;
 
                     case ("¿Porque te pongo una nuez en la mano?"):
-                        cuadroDialogo.SetActive(true);
-                        StartCoroutine(AudioDaveControl(daveSon[10], 1.55f));
-                        min = 0;
+                       duracion= (!saltar)? 1.55f:0;
+                        StartCoroutine(AudioDaveControl(daveSon[10], duracion));
+                        if(!saltar)min = 0;
                         break;
 
                     case ("¡¡ PORQUE ESTOY LOCO !!"):
-                        StartCoroutine(AudioDaveControl(daveSon[11], 2.3f));
-                        min = 0;
+                        duracion= (!saltar)? 2.3f:0;
+                        StartCoroutine(AudioDaveControl(daveSon[11],duracion));
+                        if(!saltar)min = 0;
                         break;
 
                     case ("¡¡ A PLANTAR !! "):
                         dialogos.Dequeue();
-                        min = 0;
+                        if(!saltar)min = 0;
                         break;
 
                     case ("¡¡ A PLANTAR !!"):
                         StartCoroutine(AudioDaveControl(daveSon[12], 1.25f));
                         dialogos.Dequeue();
-                        min = 0;
+                        if(!saltar)min = 0;
                         break;
 
                 }

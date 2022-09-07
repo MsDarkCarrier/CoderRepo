@@ -12,6 +12,7 @@ TagManager:
   - CasillasPlantas
   - Luces
   - SonDave
+  - Soles2D
   layers:
   - Default
   - TransparentFX
