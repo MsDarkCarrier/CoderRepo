@@ -10,13 +10,21 @@ public class MenuManager : MonoBehaviour
     public GameObject panelNombre;
     public TextMeshProUGUI nombreUsuario;
     public ContenedorMundo datosJuego;
+    private void Awake()
+    {
+        if (datosJuego.nombreJugador != "" || datosJuego.nombreJugador != null)
+        {
+            Destroy(panelNombre);
+            botAventura.SetActive(true);
+        }
+    }
     void Start()
     {
         botAventura.SetActive(false);
     }
     void Update()
     {
-        
+
     }
     public void EscenaNivel()
     {

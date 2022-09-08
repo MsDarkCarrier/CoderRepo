@@ -67,7 +67,7 @@ public class Zombie : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Planta>()&&!GameManager.instancia.pausa)
+        if (other.gameObject.GetComponent<Planta>().enabled&&!GameManager.instancia.pausa)
         {
             velocidad = 0;
             planta = other.gameObject;
