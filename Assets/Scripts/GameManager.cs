@@ -124,7 +124,6 @@ public class GameManager : MonoBehaviour
         if (plantaSobreCasilla == null)
         {
            estaCasilla.disponible = true;
-            Debug.Log("Planta eliminada");
         }
     }
 }

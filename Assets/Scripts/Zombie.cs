@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
+    private Animator controladorAnim;
     public float vida, dano, velocidad, velociCompro, tiempomax = 0.5f, timpmin, tiemporelentizado = 6f;
     public AudioSource[] comer = new AudioSource[4];
-    GameObject objetoposi, planta;
+    [SerializeField] GameObject objetoposi, planta;
     public Vector3 posiobjet, direccion;
-    private bool comiendo = false;
+    private bool comiendo = false,animActiva=false;
 
     void Start()
     {
+        controladorAnim = GetComponent<Animator>();
+        vida = 200;
         timpmin = 0;
         velociCompro = velocidad;
         if (objetoposi == null)
@@ -28,6 +31,7 @@ public class Zombie : MonoBehaviour
     }
     void Update()
     {
+        if(planta==null) controladorAnim.SetBool("Atacar", false);
         if (!GameManager.instancia.pausa)
         {
             if (vida <= 0)
@@ -35,6 +39,7 @@ public class Zombie : MonoBehaviour
                 Destroy(objetoposi);
                 Destroy(this.gameObject);
             }
+            
 
             if (comiendo && planta != null)
             {
@@ -67,13 +72,20 @@ public class Zombie : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Planta>().enabled&&!GameManager.instancia.pausa)
+        try
         {
-            velocidad = 0;
-            planta = other.gameObject;
-            Atacando(planta.GetComponent<Planta>(), comer);
-            comiendo = true;
+            if (other.gameObject.GetComponent<Planta>().enabled && !GameManager.instancia.pausa)
+            {
+                controladorAnim.SetBool("Atacar", true);
+                velocidad = 0;
+                planta = other.gameObject;
+                Atacando(planta.GetComponent<Planta>(), comer);
+                comiendo = true;
 
+            }
+        }
+        catch (System.Exception)
+        {
 
         }
     }
