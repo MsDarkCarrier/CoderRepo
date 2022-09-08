@@ -320,7 +320,6 @@ GameObject:
   - component: {fileID: 7644226429202492325}
   - component: {fileID: 5509704348887275928}
   - component: {fileID: 4337747696308655327}
-  - component: {fileID: 4545692998851745809}
   - component: {fileID: 5690574490594946710}
   m_Layer: 3
   m_Name: ZombieModel
@@ -381,7 +380,7 @@ MonoBehaviour:
   dano: 100
   velocidad: 0.56
   velociCompro: 0.56
-  tiempomax: 0.5
+  tiempomax: 0.92
   timpmin: 0
   tiemporelentizado: 6
   comer:
@@ -422,34 +421,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.210023, z: 0.64601684}
   m_Center: {x: 1.2651178e-17, y: 1.0841464, z: 0.119366996}
---- !u!114 &4545692998851745809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8513458939379884201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e23ecce3b9efdc343adcbe5deaa3103a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vida: 0
-  dano: 0
-  velocidad: 0
-  velociCompro: 0
-  tiempomax: 0.5
-  timpmin: 0
-  tiemporelentizado: 6
-  comer:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  objetoposi: {fileID: 0}
-  planta: {fileID: 0}
-  posiobjet: {x: 0, y: 0, z: 0}
-  direccion: {x: 0, y: 0, z: 0}
 --- !u!82 &5690574490594946710
 AudioSource:
   m_ObjectHideFlags: 0

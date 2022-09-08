@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a706e148cbc7240a4d26481138188e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 5000
+  vida: 2500
   _recarga: 8
 --- !u!114 &3073920421980649672
 MonoBehaviour:
