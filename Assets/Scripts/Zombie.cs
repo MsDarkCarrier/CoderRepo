@@ -9,7 +9,7 @@ public class Zombie : MonoBehaviour
     public AudioSource[] comer = new AudioSource[4];
     [SerializeField] GameObject objetoposi, planta;
     public Vector3 posiobjet, direccion;
-    private bool comiendo = false,animActiva=false;
+    private bool comiendo = false;
 
     void Start()
     {
@@ -28,6 +28,10 @@ public class Zombie : MonoBehaviour
     private void FixedUpdate()
     {
        if(!GameManager.instancia.pausa) Movimiento();
+        else
+        {
+            
+        }
     }
     void Update()
     {

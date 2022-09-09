@@ -2,23 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject contenedorJugable;
     [SerializeField] private AudioSource faltaSoles, sonidoPlantado, recogidaSol, recogidaSolDos;
+    public AudioSource hordaZombie;
     public AudioSource musicaAmbiente;
     public static GameManager instancia;
     public Camera camera2D;
     public GameObject soles2D, soles3D;
     public uint solMoneda, barraProgreso;
-    public bool terminar,pausa;
+    public bool terminar,pausa,ganaste;
     public TextMeshProUGUI texto;
     public ContenedorMundo datosJuego;
     [SerializeField] private GameObject[] casiPos = new GameObject[30];
 
     void Start()
     {
+        ganaste = false;
         pausa = false;
         instancia = this;
         if(contenedorJugable.activeInHierarchy) texto = GameObject.FindWithTag("SolesText").GetComponent<TextMeshProUGUI>();
@@ -30,6 +33,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         texto.text = System.Convert.ToString(solMoneda);
+        if (ganaste)
+        {
+            SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
+        }
     }
 
     public void CrearSoles2D(RectTransform solPositionMin, RectTransform solPositionMax)

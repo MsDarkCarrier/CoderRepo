@@ -25,7 +25,7 @@ public class Girasol : MonoBehaviour
     void ComienzaTiempo()
     {
         tiempoActual += Time.deltaTime;
-        if (tiempoActual >= 24f)
+        if (tiempoActual >= 20f)
         {
             StartCoroutine(FisicaSoles());
             tiempoActual = 0f;
