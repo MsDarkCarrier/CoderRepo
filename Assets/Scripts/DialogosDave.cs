@@ -9,7 +9,7 @@ public class DialogosDave : MonoBehaviour
     private float duracion=0;
     [SerializeField] private TextMeshProUGUI textoPreparado,textDialogo;
     private Queue<string> dialogos=new Queue<string>();
-    [SerializeField] private GameObject cuadroDialogo,dave,botSaltar;
+    [SerializeField] private GameObject cuadroDialogo,dave,botSaltar, musica;
     [SerializeField] private AudioSource sonidosPam,dialogoMusica;
     [SerializeField]private AudioSource[] daveSon = new AudioSource[11];
     private int varSonido;
@@ -66,6 +66,7 @@ public class DialogosDave : MonoBehaviour
             {
                 Destroy(textoPreparado);
                 GameManager.instancia.musicaAmbiente.enabled = true;
+                musica.SetActive(true);
                 GameManager.instancia.contenedorJugable.SetActive(true);
                 Destroy(GetComponent<DialogosDave>());
             }
