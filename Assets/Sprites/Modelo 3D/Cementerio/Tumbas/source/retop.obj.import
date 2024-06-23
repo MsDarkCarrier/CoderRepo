@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://2bw3dyq0e0c2"
+path="res://.godot/imported/retop.obj-4177125fddbb8bb4fcc440815859b616.mesh"
+
+[deps]
+
+files=["res://.godot/imported/retop.obj-4177125fddbb8bb4fcc440815859b616.mesh"]
+
+source_file="res://GitHub/CoderRepo/Assets/Sprites/Modelo 3D/Cementerio/Tumbas/source/retop.obj"
+dest_files=["res://.godot/imported/retop.obj-4177125fddbb8bb4fcc440815859b616.mesh", "res://.godot/imported/retop.obj-4177125fddbb8bb4fcc440815859b616.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

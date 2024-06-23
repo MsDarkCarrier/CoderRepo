@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://kts85p30hy7e"
+path="res://.godot/imported/Fence_White.obj-3ef4fa028a71af691d7e0b999896dd24.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Fence_White.obj-3ef4fa028a71af691d7e0b999896dd24.mesh"]
+
+source_file="res://GitHub/CoderRepo/Assets/Sprites/Modelo 3D/Fence_White.obj"
+dest_files=["res://.godot/imported/Fence_White.obj-3ef4fa028a71af691d7e0b999896dd24.mesh", "res://.godot/imported/Fence_White.obj-3ef4fa028a71af691d7e0b999896dd24.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

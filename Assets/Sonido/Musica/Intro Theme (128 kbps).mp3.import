@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xn5ais58gst3"
+path="res://.godot/imported/Intro Theme (128 kbps).mp3-bb1eab378f32ebffada9427947785246.mp3str"
+
+[deps]
+
+source_file="res://GitHub/CoderRepo/Assets/Sonido/Musica/Intro Theme (128 kbps).mp3"
+dest_files=["res://.godot/imported/Intro Theme (128 kbps).mp3-bb1eab378f32ebffada9427947785246.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
